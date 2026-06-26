@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="636" height="177" viewBox="0 0 636 177" role="img" aria-label="小黑象公众号尾板：求分享，在看也点下，求点赞">
+  <defs>
+    <style>
+      .ink { fill: none; stroke: #19475a; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: #19475a; stroke-width: 1.55; stroke-linecap: round; stroke-linejoin: round; }
+      .elephant { fill: #111111; stroke: #111111; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+      .white { fill: #ffffff; }
+      .note { font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", sans-serif; font-size: 18px; font-weight: 600; fill: #19475a; letter-spacing: 1px; }
+      .red { fill: #d82432; }
+    </style>
+    <filter id="softWobble" x="-2%" y="-8%" width="104%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018 0.11" numOctaves="1" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="0.55"/>
+    </filter>
+    <g id="xiaohei-elephant">
+      <ellipse class="elephant" cx="19" cy="17" rx="16" ry="14"/>
+      <ellipse class="elephant" cx="40" cy="20" rx="25" ry="18"/>
+      <ellipse class="elephant" cx="7" cy="19" rx="10" ry="13"/>
+      <path class="elephant" d="M18 27 C15 42 20 54 32 57"/>
+      <path class="elephant" d="M38 35 L38 61"/>
+      <path class="elephant" d="M54 35 L54 61"/>
+      <path class="thin" d="M65 20 C77 14 83 16 90 24"/>
+      <circle class="white" cx="20" cy="14" r="2.2"/>
+    </g>
+  </defs>
+
+  <rect width="636" height="177" fill="#ffffff"/>
+
+  <g filter="url(#softWobble)">
+    <path class="ink" d="M16 135.5 C92 133.8 177 134.4 246 134.2 C340 134 443 134.8 522 134.2 C560 134 598 134.5 622 134"/>
+
+    <g transform="translate(60 70) rotate(-5) scale(.78)">
+      <use href="#xiaohei-elephant"/>
+      <path class="thin" d="M20 62 C7 74 -6 84 -20 90"/>
+    </g>
+
+    <g transform="translate(132 19)">
+      <path class="ink" d="M9 1 C44 -1 82 -1 112 2 C125 4 131 12 130 25 C129 37 121 43 108 43 C77 44 39 43 14 42 C3 41 -3 34 -2 22 C-1 11 3 4 9 1 Z"/>
+      <path class="thin" d="M1 24 C-10 23 -18 26 -25 33"/>
+      <text class="note" x="28" y="28">求 “<tspan class="red">分享</tspan>”</text>
+    </g>
+
+    <g transform="translate(268 82)">
+      <path class="ink" d="M8 0 C44 -2 78 -1 112 1 C124 2 132 9 132 21 C132 33 124 41 111 42 C78 44 44 43 10 42 C0 41 -7 34 -7 23 C-7 12 -2 3 8 0 Z"/>
+      <path class="thin" d="M-5 23 C-15 22 -23 27 -28 34"/>
+      <text class="note" x="22" y="28">求点 “<tspan class="red">赞</tspan>”</text>
+    </g>
+
+    <g transform="translate(386 23)">
+      <path class="ink" d="M9 0 C38 -2 72 -2 101 1 C113 2 120 10 120 22 C120 34 113 42 100 43 C70 45 37 44 9 42 C-2 41 -8 34 -8 22 C-8 10 -2 2 9 0 Z"/>
+      <path class="thin" d="M2 43 C-2 55 -10 64 -21 69"/>
+      <text class="note" x="23" y="28"><tspan class="red">在看</tspan>也点下</text>
+    </g>
+
+    <g transform="translate(397 83) rotate(7) scale(.76)">
+      <use href="#xiaohei-elephant"/>
+      <path class="thin" d="M15 62 C4 73 -8 82 -23 87"/>
+    </g>
+
+    <g transform="translate(520 68) rotate(6) scale(.76)">
+      <use href="#xiaohei-elephant"/>
+      <path class="thin" d="M18 62 C8 75 -4 84 -18 89"/>
+    </g>
+  </g>
+</svg>
