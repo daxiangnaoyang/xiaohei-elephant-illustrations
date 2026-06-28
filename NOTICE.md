@@ -13,14 +13,9 @@ This repository is released under the MIT License. See `LICENSE`.
 - WeChat: `Yishouhundanqu`
 - Zhihu / CSDN: 大象AI共学
 
-## Inspirations and References
+## Project Scope
 
-This README structure and Skill packaging style reference the public Xiaohei Skill projects by Ian:
-
-- Ian Xiaohei Illustrations: https://github.com/helloianneo/ian-xiaohei-illustrations
-- Ian Xiaohei Scenes: https://github.com/helloianneo/ian-xiaohei-scenes
-
-The Xiaohei Elephant character rules, prompts, examples, and repository assets in this package are adapted for 大象AI共学's own visual workflow.
+The Xiaohei Elephant character rules, prompts, examples, and repository assets in this package are built for 大象AI共学's own visual workflow.
 
 ## Asset Notes
 

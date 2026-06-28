@@ -284,8 +284,6 @@ Use $xiaohei-elephant-illustrations 帮我编辑这张图。
 
 ## 相关项目
 
-- [Ian Xiaohei Illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations) - 中文小黑手绘正文配图 1.0，本仓库 README 版式参考来源
-- [Ian Xiaohei Scenes](https://github.com/helloianneo/ian-xiaohei-scenes) - 小黑 + 真实物件 + 物理动作的正文配图 2.0
 - [Ian Handdrawn PPT](https://github.com/helloianneo/ian-handdrawn-ppt) - 中文手绘技术 PPT-style 页面图生成 Skill
 - [Awesome Claude Code Skills](https://github.com/helloianneo/awesome-claude-code-skills) - Claude Code Skills / Agents / Plugins 精选合集
 
