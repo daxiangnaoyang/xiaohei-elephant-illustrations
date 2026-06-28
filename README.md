@@ -227,7 +227,11 @@ Use $xiaohei-elephant-illustrations 帮我编辑这张图。
 ```text
 .
 ├── README.md
+├── LICENSE
+├── NOTICE.md
 ├── assets/
+│   ├── daxiang-wechat-official-account-qr.png
+│   ├── daxiang-wechat-personal-qr.png
 │   ├── xiaohei-elephant-ip/
 │   │   ├── 00-母设提示词与复盘.md
 │   │   └── 01-xiaohei-elephant-ip-master.png
@@ -293,6 +297,17 @@ Use $xiaohei-elephant-illustrations 帮我编辑这张图。
 
 长期用一人 + AI 的方式建设内容生产、知识管理、自动化工作流和 Agent Skill 体系。目标是让普通人用 AI 做出真实的工作成果，而不是只会聊天。
 
+公开账号：
+
+- 微信公众号：大象AI共学
+- 微信：`Yishouhundanqu`
+- 知乎 / CSDN：大象AI共学
+
+<p>
+  <img src="assets/daxiang-wechat-official-account-qr.png" alt="大象AI共学微信公众号二维码" width="160">
+  <img src="assets/daxiang-wechat-personal-qr.png" alt="大象微信二维码" width="160">
+</p>
+
 ---
 
 ## 继续探索
@@ -310,4 +325,6 @@ Use $xiaohei-elephant-illustrations 帮我编辑这张图。
 
 ## License
 
-当前公开包沿用内部整理版本。发布前如需正式开源，请补齐 `LICENSE` 和 `NOTICE.md`。
+MIT License. See [LICENSE](LICENSE).
+
+Attribution and third-party notes are listed in [NOTICE.md](NOTICE.md).
