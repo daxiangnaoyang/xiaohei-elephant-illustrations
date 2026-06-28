@@ -2,7 +2,7 @@
 
 > 把中文文章里的学习卡点、流程断点、工具选择和 AI 协作处境，变成一张张白底、手绘、怪诞但清爽的“小黑象”正文配图。
 >
-> 16:9 横版 | 小黑象 IP | 纯白手绘 | 低科技物理隐喻 | 少量中文批注 | Codex / Claude / Hermes Skill
+> 16:9 横版 | 小黑象 IP | 1.0 白底手绘解释图 | 2.0 真实物品场景图 | Codex / Claude / Hermes Skill
 
 ---
 
@@ -21,6 +21,17 @@ Xiaohei Elephant Illustrations 是一个面向中文内容创作的 AI 绘图 Sk
 ```
 
 一句话：**让 AI 不只是“配一张图”，而是把文章里的一个关键认知动作画出来。**
+
+---
+
+## 两个版本
+
+| 版本 | Skill | 视觉核心 | 适合内容 |
+| --- | --- | --- | --- |
+| 1.0 | `xiaohei-elephant-illustrations` | 白底手绘解释图 | 方法论、流程、结构、认知拆解、公众号正文插图 |
+| 2.0 | `xiaohei-elephant-scenes` | 真实物品 + 物理动作的小现场 | 处境共鸣、工作压力、AI 工具链崩溃、项目复盘、个人经历、彩蛋长卷 |
+
+1.0 更像在白纸上画出一个认知动作。2.0 更像在白色摄影棚里搭出一个真实物品小现场。
 
 ---
 
@@ -49,10 +60,12 @@ Xiaohei Elephant Illustrations 是一个面向中文内容创作的 AI 绘图 Sk
 默认输出：
 
 - 16:9 横版白底手绘正文配图
+- 16:9 横版真实物品小现场
 - 一篇文章的 4-6 张 shot list，短文 1-3 张，长教程最多 8 张
 - 每张图的插入位置、主题、核心意思、构图模式、小黑象动作、关键物件和中文短标签
 - 单张概念图 prompt
 - 最终 PNG 图片
+- 项目复盘 / 个人经历用的小黑象彩蛋长卷
 - 公众号终稿确认后的 `06-配图方案.md` 模板
 
 默认不输出：
@@ -76,6 +89,13 @@ Xiaohei Elephant Illustrations 是一个面向中文内容创作的 AI 绘图 Sk
 - 一张图只表达一个核心动作、结构、状态或隐喻
 - 小黑象必须参与核心动作，不能只是站在旁边
 - 怪诞、有创意、清爽，但不幼稚、不卖萌、不像课程 PPT
+
+2.0 真实物品场景图额外要求：
+
+- 纯白或接近纯白摄影棚背景
+- 一个真实主物品或紧凑物品组
+- 小黑象和真实物品发生推、拉、挡、托、盖章、检查、修补等物理动作
+- 真实物品有自然光影，但不能像商品摄影或素材堆
 
 ---
 
@@ -135,11 +155,17 @@ git clone https://github.com/daxiangnaoyang/xiaohei-elephant-illustrations.git
 cd xiaohei-elephant-illustrations
 ```
 
-复制或软链接 Skill 到 Codex skills 目录：
+复制或软链接 1.0 Skill 到 Codex skills 目录：
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 ln -s "$(pwd)/skill/xiaohei-elephant-illustrations" "${CODEX_HOME:-$HOME/.codex}/skills/xiaohei-elephant-illustrations"
+```
+
+复制或软链接 2.0 Skill：
+
+```bash
+ln -s "$(pwd)/skill/xiaohei-elephant-scenes" "${CODEX_HOME:-$HOME/.codex}/skills/xiaohei-elephant-scenes"
 ```
 
 如果你使用的是 Hermes / Claude Code 运行时，把目标目录替换成对应的 Skill root。
@@ -148,6 +174,7 @@ ln -s "$(pwd)/skill/xiaohei-elephant-illustrations" "${CODEX_HOME:-$HOME/.codex}
 
 ```text
 skill/xiaohei-elephant-illustrations/
+skill/xiaohei-elephant-scenes/
 ```
 
 根目录的 README、docs、assets 和 examples 是 GitHub 分享文档。
@@ -184,6 +211,19 @@ Use $xiaohei-elephant-illustrations 为“AI 输出必须验收，不能直接�
 画面要怪诞但清爽，小黑象必须承担核心动作，不要做成 PPT 流程图。
 ```
 
+### 生成 2.0 真实物品场景图
+
+```text
+Use $xiaohei-elephant-scenes 为“工具调用雪崩不是模型问题，而是工程系统没有兜住”生成一张小黑象 2.0 正文配图。
+要求：16:9 横版、纯白摄影棚背景、真实物品 + 物理动作、小黑象必须有短象鼻和小耳朵。
+```
+
+### 彩蛋长卷
+
+```text
+Use $xiaohei-elephant-scenes 的彩蛋长卷模式，把这个项目复盘做成一张超横版真实物品故事图。
+```
+
 ### 编辑已有图
 
 ```text
@@ -195,7 +235,7 @@ Use $xiaohei-elephant-illustrations 帮我编辑这张图。
 
 ## 工作流程
 
-这个 Skill 的流程是：
+1.0 的流程是：
 
 1. 读取文章、Markdown、教程、SOP、复盘或用户给的主题
 2. 提炼读者处境、核心冲突、流程断点和适合视觉化的段落
@@ -207,6 +247,15 @@ Use $xiaohei-elephant-illustrations 帮我编辑这张图。
 8. 每张图单独调用图像模型生成，不拼成九宫格
 9. 按 QA checklist 检查：白底、留白、小黑象形体、中文标注、非 PPT 感、非旧案例复刻
 10. 保存最终 PNG，并报告用途、路径和需要再收的风险点
+
+2.0 的流程是：
+
+1. 读取文章、项目复盘、个人经历或主题
+2. 提炼读者处境、核心冲突和物理动作
+3. 选择一个真实主物品或紧凑物品组
+4. 让小黑象承担推、拉、挡、托、修、检查、盖章等核心动作
+5. 生成 16:9 真实物品小现场，或生成 5-8 节点彩蛋长卷
+6. 按 QA 检查：小黑象形体、真实物品、物理动作、留白、短标签、非旧小黑
 
 公众号文章建议工作流：
 
@@ -252,19 +301,28 @@ Use $xiaohei-elephant-illustrations 帮我编辑这张图。
 │       │   └── cover-prompt.md
 │       └── shot-list.md
 └── skill/
-    └── xiaohei-elephant-illustrations/
+    ├── xiaohei-elephant-illustrations/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   │   └── openai.yaml
+    │   ├── assets/
+    │   │   └── examples/
+    │   └── references/
+    │       ├── article-visual-strategy.md
+    │       ├── composition-patterns.md
+    │       ├── prompt-template.md
+    │       ├── qa-checklist.md
+    │       ├── style-dna.md
+    │       └── xiaohei-elephant-ip.md
+    └── xiaohei-elephant-scenes/
         ├── SKILL.md
         ├── agents/
         │   └── openai.yaml
-        ├── assets/
-        │   └── examples/
         └── references/
-            ├── article-visual-strategy.md
-            ├── composition-patterns.md
+            ├── object-patterns.md
             ├── prompt-template.md
             ├── qa-checklist.md
-            ├── style-dna.md
-            └── xiaohei-elephant-ip.md
+            └── style-dna.md
 ```
 
 ---
