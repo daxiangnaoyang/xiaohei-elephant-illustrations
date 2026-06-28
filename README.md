@@ -83,29 +83,35 @@ Xiaohei Elephant Illustrations 是一个面向中文内容创作的 AI 绘图 Sk
 
 下面这些图来自脱敏示例项目，用来展示不同类型的小黑象正文配图。它们是风格校准样例，不是固定构图模板；使用时应该从当前文章重新发明隐喻。
 
-### 框架、Harness 与 Loop
+### 完成判定处
 
-![框架、Harness 与 Loop](examples/harness-loop-engineering/generated/01-framework-harness-loop.png)
+![完成判定处](examples/harness-loop-engineering/generated/01-completion-gate.png)
 
-适合表达：复杂框架之间的分工、约束、调用关系和协作边界。
+适合表达：AI 输出不能只靠“自称完成”，必须进入可见的验收和证据检查。
 
-### Tool Call 雪崩
+### 自转与零件
 
-![Tool Call 雪崩](examples/harness-loop-engineering/generated/02-tool-call-avalanche.png)
+![自转与零件](examples/harness-loop-engineering/generated/02-self-running-parts.png)
 
-适合表达：工具调用失控、任务拆解过细、上下文和执行链路快速堆积。
+适合表达：系统能自己转起来，但底层零件、约束和运行边界仍然要有人设计。
 
-### 验证循环
+### 安全外壳
 
-![验证循环](examples/harness-loop-engineering/generated/03-verification-loop.png)
+![安全外壳](examples/harness-loop-engineering/generated/03-safety-shell.png)
 
-适合表达：AI 输出不能直接发布，需要经过测试、校验、返工和再确认。
+适合表达：真正可用的 AI 工作流，需要权限控制、日志审计、限流保护和熔断降级。
 
-### Loop 自动化
+### 积木城堡
 
-![Loop 自动化](examples/harness-loop-engineering/generated/04-loop-automation.png)
+![积木城堡](examples/harness-loop-engineering/generated/04-building-block-castle.png)
 
-适合表达：重复任务被自动化接管，但仍需要人设置闸门和验收条件。
+适合表达：复杂系统不是一次搭完，而是一块一块搭出可测试、可替换的结构。
+
+### 四类崩溃
+
+![四类崩溃](examples/harness-loop-engineering/generated/05-four-failures.png)
+
+适合表达：工具链、需求、文档和执行过程同时失控时，问题不是模型本身，而是工程系统没有兜住。
 
 ### 封面示例
 
@@ -232,10 +238,11 @@ Use $xiaohei-elephant-illustrations 帮我编辑这张图。
 ├── examples/
 │   └── harness-loop-engineering/
 │       ├── generated/
-│       │   ├── 01-framework-harness-loop.png
-│       │   ├── 02-tool-call-avalanche.png
-│       │   ├── 03-verification-loop.png
-│       │   ├── 04-loop-automation.png
+│       │   ├── 01-completion-gate.png
+│       │   ├── 02-self-running-parts.png
+│       │   ├── 03-safety-shell.png
+│       │   ├── 04-building-block-castle.png
+│       │   ├── 05-four-failures.png
 │       │   └── cover.png
 │       ├── prompts/
 │       │   └── cover-prompt.md
