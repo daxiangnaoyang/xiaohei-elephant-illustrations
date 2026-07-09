@@ -24,6 +24,18 @@
 - 原因：提示词只说“小象”和“真实物品”，模型容易把它理解成玩具摄影或可爱小象模型；同时缺少明确的 camera pulled back / airy white space / nimble silhouette 约束。
 - 处理：标准图默认把镜头后退一档，整体场景只占画面中等偏小区域；小黑象写成 `small nimble solid black elephant silhouette`，强调短细腿、紧凑轻巧身体、动作拉伸感。出现 close-up、低机位英雄镜头、圆胖摆件感时直接重生成。
 
+## 象腿漂移成小黑人腿
+
+- 现象：整体镜头和比例对了，但小黑象只剩两条细腿，像原版小黑角色或小黑人加了一根象鼻；腿部出现膝盖、脚掌、鞋子或二足站姿。
+- 原因：`thin peg legs` 容易被模型理解成火柴腿/人形腿；角色动作如果写“站立、伸手、够到”，也容易变成二足小黑。
+- 处理：提示词必须写 `FOUR SHORT ROUNDED ELEPHANT PEG LEGS under the body, quadruped stance`，并禁止 `biped pose, human legs, stick legs, knees, feet, shoes`。动作优先由短象鼻完成，不给小黑象加人类手臂或手掌。
+
+## Cover 版混成正文信息图
+
+- 现象：用户要“小黑象 2.0 cover”，结果输出成 16:9 白底正文图、正文节点墙或密集信息图。
+- 原因：正文图和封面图没有分模式；只套用了标准 2.0 小现场模板。
+- 处理：Cover 版必须单独走 21:9 超横版，参考 `_skill-staging/wechat-tech-article-infographic` 的深色科技感、青橙对比、HUD/玻璃拟态/发光连接线要求；小黑象 2.0 只承担一个核心真实物品隐喻。没有明确标题时不让模型生成长中文标题，留出本地排版区域。
+
 ## 物品清单化
 
 - 现象：把文章里的所有名词都变成道具，画面像素材堆。
