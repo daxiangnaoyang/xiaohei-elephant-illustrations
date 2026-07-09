@@ -66,7 +66,7 @@ Xiaohei Elephant Illustrations 是一个面向中文内容创作的 AI 绘图 Sk
 - 单张概念图 prompt
 - 最终 PNG 图片
 - 项目复盘 / 个人经历用的小黑象彩蛋长卷
-- 公众号终稿确认后的 `06-配图方案.md` 模板
+- 终稿确认后的 `06-配图方案.md` 模板
 
 默认不输出：
 
@@ -255,7 +255,7 @@ Use $xiaohei-elephant-illustrations 帮我编辑这张图。
 3. 选择一个真实主物品或紧凑物品组
 4. 让小黑象承担推、拉、挡、托、修、检查、盖章等核心动作
 5. 生成 16:9 真实物品小现场，或生成 5-8 节点彩蛋长卷
-6. 按 QA 检查：小黑象形体、真实物品、物理动作、留白、短标签、非旧小黑
+6. 按 QA 检查：小黑象形体、真实物品、物理动作、留白、短标签
 
 公众号文章建议工作流：
 
@@ -349,11 +349,15 @@ Use $xiaohei-elephant-illustrations 帮我编辑这张图。
 
 ## 关于作者
 
-**大象** - 大象AI共学主理人 / 内容创作者 / AI 实战共学社区操盘者
+**大象** - 大象AI共学/ 内容创作者 / AI 实战共学社区操盘者
 
 长期用一人 + AI 的方式建设内容生产、知识管理、自动化工作流和 Agent Skill 体系。目标是让普通人用 AI 做出真实的工作成果，而不是只会聊天。
 
 公开账号：
+<img width="860" height="860" alt="image" src="https://github.com/user-attachments/assets/64f2400b-a00a-423f-8656-bae97babcf58" />
+<img width="860" height="860" alt="image" src="https://github.com/user-attachments/assets/79d76b5a-9ac0-43de-88d5-8e0aa350ca89" />
+
+
 
 - 微信公众号：大象AI共学
 - 微信：`Yishouhundanqu`
