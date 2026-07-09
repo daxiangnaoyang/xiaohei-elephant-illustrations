@@ -143,4 +143,3 @@ Not a glossy 3D toy, not plush mascot, not realistic elephant figurine, not cute
 - 变成旧小黑、小黑人、黑色人形、火柴人。
 - 变成玩具象、写实象、萌宠象、儿童插画象。
 - 小黑象没有承担核心动作。
-
