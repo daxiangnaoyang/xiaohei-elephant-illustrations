@@ -354,11 +354,6 @@ Use $xiaohei-elephant-illustrations 帮我编辑这张图。
 长期用一人 + AI 的方式建设内容生产、知识管理、自动化工作流和 Agent Skill 体系。目标是让普通人用 AI 做出真实的工作成果，而不是只会聊天。
 
 公开账号：
-<img width="860" height="860" alt="image" src="https://github.com/user-attachments/assets/64f2400b-a00a-423f-8656-bae97babcf58" />
-<img width="860" height="860" alt="image" src="https://github.com/user-attachments/assets/79d76b5a-9ac0-43de-88d5-8e0aa350ca89" />
-
-
-
 - 微信公众号：大象AI共学
 - 微信：`Yishouhundanqu`
 - 知乎 / CSDN：大象AI共学
