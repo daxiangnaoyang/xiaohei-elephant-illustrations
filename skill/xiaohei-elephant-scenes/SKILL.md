@@ -47,6 +47,7 @@ when-to-use: |
 按需读取，不要一次全塞：
 
 - `GOTCHAS.md` - 路由、旧小黑混淆、真实物品过载和封面误用问题
+- `references/xiaohei-elephant-ip-lock.md` - 小黑象 2.0 IP 锁定、四足腿部规则、Prompt 锁定块和 QA 一票否决
 - `references/style-dna.md` - 2.0 视觉 DNA、摄影棚、真实物品、留白和小黑象形体门槛
 - `references/object-patterns.md` - 真实物品选择、物理动作和原创隐喻规则
 - `references/prompt-template.md` - 标准图和彩蛋长卷提示词模板
@@ -60,6 +61,7 @@ when-to-use: |
 - 用户只说“小黑象配图 / 白底手绘 / 正文插图”时，默认用 `xiaohei-elephant-illustrations`。
 - 用户说“小黑象 2.0 / 真实物品 / 实物 / 真实物件 / 物理动作 / 场景图 / 小现场 / 长卷”时，用本 Skill。
 - 用户说“小黑象 2.0 封面 / cover / 公众号头图”时，用本 Skill 的 Cover 模式，不混入正文 16:9 图数量。
+- 生成前必须把 `references/xiaohei-elephant-ip-lock.md` 的标准 Prompt 锁定块折进提示词，尤其是四足短圆桩腿和禁止二足/人形腿规则。
 - 用户要求“统一小黑象推送模板”且指定 2.0 时，先复用 `xiaohei-elephant-illustrations` 中的统一推送结构，再把 shot list、生成锁定和 QA 替换成本 Skill 的真实物品场景图要求。
 - 生成前先输出 shot list；用户明确要求直接出图时，也要先在内部完成母版/动作/物件锁定。
 - 每张标准图只表达一个核心物理动作；不要把主题里的所有名词都摆进去。
@@ -146,6 +148,7 @@ cd "<输出目录>" && codex exec --sandbox workspace-write --skip-git-repo-chec
 - 生成后在 Hermes 内用 `codex exec -i "图片.png"` 做视觉 QA
 
 **Codex 生图 prompt 要点（英文，GPT-image-1 英文效果最好）：**
+- 必须包含 `references/xiaohei-elephant-ip-lock.md` 的 `Xiaohei Elephant 2.0 IP lock` 等价内容。
 - 必须包含：`A small nimble solid BLACK elephant silhouette, SHORT TRUNK, SMALL ROUND EARS, FOUR SHORT ROUNDED ELEPHANT PEG LEGS under the body, WHITE DOT EYES, compact agile body, camera pulled back`
 - 必须包含：`NO human figures, stick figures, robots, bears. Elephant is the ONLY character.`
 - 必须包含：`No biped pose, no human legs, no stick legs, no knees, no feet, no shoes, no close-up, no low-angle hero shot, no bulky toy elephant, no heavy round statue.`

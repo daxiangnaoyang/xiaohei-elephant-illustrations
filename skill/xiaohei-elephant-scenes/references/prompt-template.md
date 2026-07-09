@@ -24,6 +24,7 @@
 - The image must still read as one strange but precise physical moment, not a concept poster.
 
 小黑象硬性要求：
+Use the full `Xiaohei Elephant 2.0 IP lock` from `references/xiaohei-elephant-ip-lock.md`. The following is the minimum lock:
 ELEPHANT (FIXED IP CHARACTER — MUST BE CONSISTENT ACROSS ALL IMAGES):
 A small solid BLACK baby elephant with these EXACT features:
 - Short stubby trunk, about as wide as its head, like a tiny curled hose, does NOT reach the ground
@@ -64,6 +65,7 @@ PPT 信息图、复杂流程图、UI 截图、仪表盘、科技 HUD、商业海
 参考科技感公众号信息图要求，但这是一张 cover：标题区、主视觉区、底部短句区分开，画面要有点击吸引力，不做密集正文信息图。
 
 小黑象 2.0 主体：
+Use the full `Xiaohei Elephant 2.0 IP lock` from `references/xiaohei-elephant-ip-lock.md`. Minimum lock:
 A small nimble solid BLACK elephant silhouette, SHORT TRUNK, SMALL ROUND EARS, FOUR SHORT ROUNDED ELEPHANT PEG LEGS under the body, WHITE DOT EYES, compact agile body.
 Quadruped elephant stance only. No biped standing pose, no human legs, no stick legs, no knees, no feet, no shoes.
 Matte black simplified silhouette, not glossy 3D toy, not plush mascot, not realistic elephant figurine, not heavy round statue.
