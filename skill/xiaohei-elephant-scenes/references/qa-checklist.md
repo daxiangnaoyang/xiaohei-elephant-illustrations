@@ -1,5 +1,12 @@
 # 小黑象 2.0 QA Checklist
 
+## Entrypoint
+
+- [ ] `agents/openai.yaml` 不是 `{}` 空对象。
+- [ ] `agents/openai.yaml` 的 `default_prompt` 明确调用 `$xiaohei-elephant-scenes`，而不是旧版 `$xiaohei-scenes`。
+- [ ] `agents/openai.yaml` 明确要求读取 `xiaohei-elephant-ip-lock.md`、`style-dna.md`、`prompt-template.md`、`object-patterns.md`、`qa-checklist.md` 和 `GOTCHAS.md`。
+- [ ] 路由边界清楚：2.0 / 真实物品 / 物理动作 / 小现场走本 Skill；普通白底手绘走 `xiaohei-elephant-illustrations`；旧版 `xiaohei-scenes` 不承接“小黑象”请求。
+
 ## Critical
 
 - [ ] 小黑象有短象鼻、小耳朵、短腿、白点眼。
@@ -47,6 +54,8 @@
 
 - [ ] Cover 是 21:9 超横版，不混入正文 16:9 配图数量。
 - [ ] 背景符合深色科技感、青橙对比、弱 HUD / 玻璃拟态 / 发光连接线方向。
+- [ ] 黑色小黑象没有压在黑色背景里；必须有浅色台面、纸面、聚光区或清晰边缘光，1 秒内能看清轮廓、短象鼻和四足。
+- [ ] 核心隐喻 3 秒内可读，最好是一个明确物理链路，例如“稿件 -> 验收门 -> 通过托盘”；不得只靠抽象发光面板表达。
 - [ ] 标题区、主视觉区、底部短句区有清晰层次，不像正文节点墙。
 - [ ] 小黑象仍满足四足、短象鼻、小耳朵、白点眼，不因深色科技风漂移成人形角色。
 - [ ] 如果没有明确标题，画面不应生成乱码、伪文字或多余英文。

@@ -63,12 +63,14 @@ PPT 信息图、复杂流程图、UI 截图、仪表盘、科技 HUD、商业海
 画面：
 深色科技背景，青橙对比，轻微纸张纹理，弱 HUD 网格，玻璃拟态卡片，发光连接线，手绘科技信息图质感。
 参考科技感公众号信息图要求，但这是一张 cover：标题区、主视觉区、底部短句区分开，画面要有点击吸引力，不做密集正文信息图。
+黑象可读性优先：黑色小黑象不能直接压在黑色背景上。必须给小黑象和核心物件设置浅色台面、暖色聚光区、浅色纸面或清晰边缘光，让黑色剪影在 1 秒内可见。
+隐喻可读性优先：只用一个主动作串起画面，例如“稿件 -> 验收门 -> 通过托盘”。避免抽象漂浮面板、复杂 HUD、节点墙和无法 3 秒读懂的科技装饰。
 
 小黑象 2.0 主体：
 Use the full `Xiaohei Elephant 2.0 IP lock` from `references/xiaohei-elephant-ip-lock.md`. Minimum lock:
 A small nimble solid BLACK elephant silhouette, SHORT TRUNK, SMALL ROUND EARS, FOUR SHORT ROUNDED ELEPHANT PEG LEGS under the body, WHITE DOT EYES, compact agile body.
 Quadruped elephant stance only. No biped standing pose, no human legs, no stick legs, no knees, no feet, no shoes.
-Matte black simplified silhouette, not glossy 3D toy, not plush mascot, not realistic elephant figurine, not heavy round statue.
+Matte black simplified silhouette with visible contour separation from the dark background; not glossy 3D toy, not plush mascot, not realistic elephant figurine, not heavy round statue.
 
 真实物品：
 一个核心真实物品或紧凑物品组：{真实主物品}。
@@ -80,9 +82,10 @@ Matte black simplified silhouette, not glossy 3D toy, not plush mascot, not real
 
 构图：
 21:9 horizontal, cinematic wide cover. Main visual sits slightly right of center or center, title-safe blank area on left/top, bottom quote-safe area. Clean visual hierarchy, not a dense information wall.
+If using a dark background, place the elephant on a small warm off-white tabletop island / paper surface / spotlight zone, or add a subtle cyan rim light and thin warm edge light. The elephant must not disappear into black.
 
 避免：
-正文信息图式密集节点、PPT 流程图、真实品牌 logo、伪文字 HUD、复杂仪表盘、营销海报大字压满、写实人物、机器人角色、小黑人、旧小黑、人形腿、二足站姿、笨重玩具小象。
+黑底黑象看不清、抽象科技面板看不懂、正文信息图式密集节点、PPT 流程图、真实品牌 logo、伪文字 HUD、复杂仪表盘、营销海报大字压满、写实人物、机器人角色、小黑人、旧小黑、人形腿、二足站姿、笨重玩具小象。
 ```
 
 ## 彩蛋长卷
