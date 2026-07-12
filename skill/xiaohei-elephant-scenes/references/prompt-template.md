@@ -15,6 +15,13 @@
 核心物理动作是：{核心物理动作}。
 小黑象正在：{小黑象动作}。
 
+真实品牌标识规则：
+- If the topic explicitly involves a real product, platform, app, or company, include the authentic official brand logo / app icon / product mark on the relevant real object.
+- Examples: for Feishu/Lark scenes, use the official Feishu/Lark brand logo or app icon on a card, app tile, folder, document, or small device screen; for Codex/OpenAI scenes, use the official OpenAI logo or Codex/OpenAI product mark on the relevant card, app tile, terminal tile, folder, or device screen.
+- The logo must be small, accurate, and attached to a real object as an identification cue. Do not invent fake logos, distorted lookalike logos, parody marks, or unofficial pseudo-branding.
+- Do not turn the image into a brand advertisement, product KV, sponsorship poster, or app screenshot. The physical action remains the main story.
+- If the brand is not explicitly named or cannot be confirmed, use a generic neutral icon instead of guessing a brand logo.
+
 原版小黑 2.0 质感锁定：
 - Treat the original Xiaohei Scenes 2.0 examples as the quality bar for restraint, whitespace, object realism, sparse labels, and clear physical action.
 - Pull the camera back. Scene footprint should be small-to-medium and airy: about 46%-58% of canvas width and 26%-38% of canvas height.
@@ -75,6 +82,7 @@ Matte black simplified silhouette with visible contour separation from the dark 
 真实物品：
 一个核心真实物品或紧凑物品组：{真实主物品}。
 小黑象用短象鼻参与核心动作：{小黑象动作}。
+如果主题明确涉及真实品牌 / 产品 / App，核心真实物品可以带对应官方品牌 logo、app icon 或产品标识。Examples: Feishu/Lark scenes use the official Feishu/Lark brand logo or app icon; Codex/OpenAI scenes use the official OpenAI logo or Codex/OpenAI product mark. Keep the logo accurate, small, and object-bound. Do not invent fake logos or turn the cover into a brand ad.
 
 文字策略：
 如果标题为空，不要生成可读中文标题，只留出标题区和底部短句区，后续本地排版。
@@ -85,7 +93,7 @@ Matte black simplified silhouette with visible contour separation from the dark 
 If using a dark background, place the elephant on a small warm off-white tabletop island / paper surface / spotlight zone, or add a subtle cyan rim light and thin warm edge light. The elephant must not disappear into black.
 
 避免：
-黑底黑象看不清、抽象科技面板看不懂、正文信息图式密集节点、PPT 流程图、真实品牌 logo、伪文字 HUD、复杂仪表盘、营销海报大字压满、写实人物、机器人角色、小黑人、旧小黑、人形腿、二足站姿、笨重玩具小象。
+黑底黑象看不清、抽象科技面板看不懂、正文信息图式密集节点、PPT 流程图、无依据的伪品牌 logo、错误 logo、logo 抢主角、品牌广告 KV、伪文字 HUD、复杂仪表盘、营销海报大字压满、写实人物、机器人角色、小黑人、旧小黑、人形腿、二足站姿、笨重玩具小象。
 ```
 
 ## 彩蛋长卷
@@ -101,6 +109,7 @@ If using a dark background, place the elephant on a small warm off-white tableto
 沿路径放置 5-8 个真实物品节点，每个节点都有小黑象参与一个物理动作。
 节点不编号，不做时间轴模块，不做 PPT 流程图。
 左侧是起点，右侧是当前结论或下一阶段。
+如果某个节点明确对应真实产品、平台或 App，可以在该节点的卡片、文件夹、设备屏幕或 app tile 上使用对应官方品牌 logo / app icon；不要虚构品牌，不要让 logo 变成节点主角。
 
 小黑象硬性要求：
 每个小黑象都必须是黑色小象：
