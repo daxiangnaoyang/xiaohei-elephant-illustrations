@@ -57,7 +57,8 @@ No biped pose, no human legs, no stick legs, no knees, no feet, no shoes.
 默认形态：
 
 - 低矮小象剪影，而不是站立小人。
-- 高度通常保持在画面高度的 7%-11%；cover 版可略大，但不要成为巨型玩具主角。
+- 标准 16:9 图高度通常保持在画面高度的 3%-5%；cover 版高度保持在 4%-6%。这是硬上限，不是建议值。
+- 黑色视觉体量约为此前小黑象测试图的 1/3；小黑象必须比真实主物品小很多，不超过主物品高度的 1/3。
 - 身体接近短豆形 / 小胶囊 / 低矮圆块。
 - 短象鼻是主要动作器官。
 - 四足支撑身体，动作可以前倾、伸脖、转身，但不能二足化。
@@ -123,7 +124,8 @@ No biped pose, no human legs, no stick legs, no knees, no feet, no shoes.
 
 ```text
 Xiaohei Elephant 2.0 IP lock:
-A small nimble solid BLACK baby elephant silhouette, matte black cutout body, tiny white dot eyes, short stubby trunk like a small curled hose, small round ears, compact low body.
+A tiny nimble solid BLACK baby elephant silhouette, matte black cutout body, tiny white dot eyes, short stubby trunk like a small curled hose, small round ears, compact low body.
+Scale lock: in standard 16:9 images, elephant height is only 3%-5% of canvas height; in cover images, only 4%-6%. Its black visual mass should feel about one third of previous oversized elephant tests and never exceed one third of the main real object's height.
 FOUR SHORT ROUNDED ELEPHANT PEG LEGS under the body, quadruped stance.
 Front and rear legs may be partially hidden by the body or perspective, but it must still read as a four-legged baby elephant.
 The trunk performs the main action. Do not add human arms or hands.

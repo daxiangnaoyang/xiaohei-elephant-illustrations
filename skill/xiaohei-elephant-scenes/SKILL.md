@@ -101,6 +101,7 @@ when-to-use: |
 核心物理动作：
 小黑象动作：
 小黑象腿部锁定：四足短圆桩腿 / 禁止二足人形腿
+小黑象占比锁定：标准图高度 3%-5% / cover 高度 4%-6% / 黑色视觉体量约为此前测试的 1/3
 中文短标签：
 画面 3 秒读懂句：
 风险/避坑：
@@ -150,7 +151,7 @@ cd "<输出目录>" && codex exec --sandbox workspace-write --skip-git-repo-chec
 
 **Codex 生图 prompt 要点（英文，GPT-image-1 英文效果最好）：**
 - 必须包含 `references/xiaohei-elephant-ip-lock.md` 的 `Xiaohei Elephant 2.0 IP lock` 等价内容。
-- 必须包含：`A small nimble solid BLACK elephant silhouette, SHORT TRUNK, SMALL ROUND EARS, FOUR SHORT ROUNDED ELEPHANT PEG LEGS under the body, WHITE DOT EYES, compact agile body, camera pulled back`
+- 必须包含：`A tiny nimble solid BLACK elephant silhouette, SHORT TRUNK, SMALL ROUND EARS, FOUR SHORT ROUNDED ELEPHANT PEG LEGS under the body, WHITE DOT EYES, compact agile body, camera pulled far back, elephant height only 3%-5% of canvas height`
 - 必须包含：`NO human figures, stick figures, robots, bears. Elephant is the ONLY character.`
 - 必须包含：`No biped pose, no human legs, no stick legs, no knees, no feet, no shoes, no close-up, no low-angle hero shot, no bulky toy elephant, no heavy round statue.`
 - 中文标签直接写中文字符，GPT-image-1 能正确渲染
@@ -167,7 +168,7 @@ cd "<输出目录>" && codex exec --sandbox workspace-write --skip-git-repo-chec
 - 如果主题明确涉及真实品牌 / 产品 / App，主物品可带官方品牌 logo、app icon 或产品标识；例如飞书用飞书标识，Codex / OpenAI 用 OpenAI 标识。logo 要小而准，贴在真实物品上，不做成品牌 KV。
 - 小黑象参与核心物理动作
 - 短象鼻、小耳朵、四足短圆桩腿、白点眼；禁止二足站姿、人形腿、火柴腿、鞋子脚掌
-- 镜头后退，整体场景只占画面中等偏小区域；小黑象轻巧、灵活，不是笨重玩具或摆件
+- 镜头后退，整体场景只占画面中等偏小区域；小黑象必须明显缩小，标准图高度约 3%-5% 画面高，黑色视觉体量约为此前测试图的 1/3，不超过主物品高度的 1/3；小黑象轻巧、灵活，不是笨重玩具或摆件
 - 2-4 个中文手写短标签
 - 少量蓝 / 黄 / 红 / 橙点缀
 - 禁止小黑人、黑色人形、旧版小黑、火柴人、普通黑球、萌宠化、PPT 信息图、UI 截图、复杂架构图
@@ -185,6 +186,7 @@ Cover 版是单独的一张图，不混入正文配图数量。
 - 小黑象 2.0 融入主视觉：一个真实物品核心隐喻 + 小黑象用短象鼻参与动作。
 - 如果 cover 主题明确涉及真实品牌 / 产品 / App，可在真实物品上使用对应官方 logo / app icon / 产品标识，作为识别锚点；logo 不应成为主标题或广告主视觉，也不暗示官方合作、授权或背书。
 - 小黑象仍按 2.0 硬门槛：短象鼻、小耳朵、四足短圆桩腿、白点眼；禁止二足站姿、人形腿、火柴腿。
+- Cover 里小黑象也只是小执行者，不是主视觉主体；高度约 4%-6% 画面高，黑色体量约为此前测试 cover 的 1/3，必须能看清但不能压过真实主物品。
 - 标题区、主视觉区、底部短句区分开；不要做成正文信息图或节点墙。
 - 用户没有给标题时，生图不要生成长中文标题，只留出标题区，后续本地排版。
 - 用户给定标题且短于 12 字时，可以尝试直接生成标题；如果错字明显，重生成无文字底图或后期本地排版。

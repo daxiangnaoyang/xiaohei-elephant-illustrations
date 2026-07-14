@@ -25,6 +25,7 @@
 原版小黑 2.0 质感锁定：
 - Treat the original Xiaohei Scenes 2.0 examples as the quality bar for restraint, whitespace, object realism, sparse labels, and clear physical action.
 - Pull the camera back. Scene footprint should be small-to-medium and airy: about 46%-58% of canvas width and 26%-38% of canvas height.
+- Scale down the Xiaohei Elephant itself aggressively. In standard 16:9 images, the elephant height should be only 3%-5% of canvas height, and its black visual mass should feel about one third of the previous oversized elephant tests. The elephant must be clearly smaller than the main real object, never taller than one third of the main object's height.
 - One real main object or one compact main object group only; at most 1 small prop for first-pass previews, 2 maximum only when necessary.
 - Keep the whole image airy with generous empty white space around the scene. Do not make a close-up, low-angle hero shot, product hero shot, toy photography poster, or dense object pile.
 - Use only very light contact shadows under objects and the elephant. No grey background, no vignette, no gradient, no heavy studio shadow.
@@ -33,7 +34,8 @@
 小黑象硬性要求：
 Use the full `Xiaohei Elephant 2.0 IP lock` from `references/xiaohei-elephant-ip-lock.md`. The following is the minimum lock:
 ELEPHANT (FIXED IP CHARACTER — MUST BE CONSISTENT ACROSS ALL IMAGES):
-A small solid BLACK baby elephant with these EXACT features:
+A tiny solid BLACK baby elephant with these EXACT features:
+- SIZE LOCK: standard 16:9 image height only 3%-5% of canvas height; black visual mass about one third of previous oversized elephant tests; never taller than one third of the main real object's height
 - Short stubby trunk, about as wide as its head, like a tiny curled hose, does NOT reach the ground
 - Two small round ears, like buttons on each side of a round head
 - Four short rounded elephant peg legs attached under the body, quadruped stance. Front and rear legs may be partly hidden by the body but it must NOT become two human-like legs, stick legs, knees, feet, shoes, or a biped standing pose.
@@ -75,7 +77,8 @@ PPT 信息图、复杂流程图、UI 截图、仪表盘、科技 HUD、商业海
 
 小黑象 2.0 主体：
 Use the full `Xiaohei Elephant 2.0 IP lock` from `references/xiaohei-elephant-ip-lock.md`. Minimum lock:
-A small nimble solid BLACK elephant silhouette, SHORT TRUNK, SMALL ROUND EARS, FOUR SHORT ROUNDED ELEPHANT PEG LEGS under the body, WHITE DOT EYES, compact agile body.
+A tiny nimble solid BLACK elephant silhouette, SHORT TRUNK, SMALL ROUND EARS, FOUR SHORT ROUNDED ELEPHANT PEG LEGS under the body, WHITE DOT EYES, compact agile body.
+Scale lock: in cover images the elephant height is only 4%-6% of canvas height. The black visual mass should feel about one third of the previous oversized cover tests. It must be readable, but clearly smaller than the main real object and never the dominant visual mass.
 Quadruped elephant stance only. No biped standing pose, no human legs, no stick legs, no knees, no feet, no shoes.
 Matte black simplified silhouette with visible contour separation from the dark background; not glossy 3D toy, not plush mascot, not realistic elephant figurine, not heavy round statue.
 
@@ -114,7 +117,8 @@ If using a dark background, place the elephant on a small warm off-white tableto
 小黑象硬性要求：
 每个小黑象都必须是黑色小象：
 ELEPHANT (FIXED IP CHARACTER — MUST BE CONSISTENT ACROSS ALL IMAGES):
-A small solid BLACK baby elephant with these EXACT features:
+A tiny solid BLACK baby elephant with these EXACT features:
+- SIZE LOCK: each elephant is a tiny worker, not a mascot; each elephant should be much smaller than the nearby real object and should not become the main visual mass
 - Short stubby trunk, about as wide as its head, like a tiny curled hose, does NOT reach the ground
 - Two small round ears, like buttons on each side of a round head
 - Four short rounded elephant peg legs under the body, quadruped stance, not human legs or stick legs

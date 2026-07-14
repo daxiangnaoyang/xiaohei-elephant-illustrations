@@ -1,1 +1,57 @@
-{}
+interface:
+  display_name: "小黑象 2.0 真实物品场景图"
+  short_description: "生成小黑象 2.0 的真实物品小现场、物理动作配图、cover 和彩蛋长卷"
+  default_prompt: |
+    Use $xiaohei-elephant-scenes for this request.
+
+    默认调用链：
+    1. 先判断模式：标准 16:9 正文图、21:9 cover、或彩蛋长卷；用户未明确说 cover/长卷时默认标准图。
+    2. 必须读取并执行这些共享约束：
+       - references/xiaohei-elephant-ip-lock.md：复制或等价包含 Xiaohei Elephant 2.0 IP lock，尤其是短象鼻、小耳朵、白点眼、四足短圆桩腿、禁止二足/人形腿，以及标准图 3%-5% / cover 4%-6% 的小黑象占比硬上限。
+       - references/style-dna.md：锁定原版小黑 2.0 质感，包括镜头后退、真实物品少而准、小黑象黑色视觉体量约为此前测试的 1/3、轻接触阴影、手写短标签、颜色只做小点缀。
+       - references/prompt-template.md：按对应模式组织最终生图 prompt，不临时手写一套平行模板。
+       - references/object-patterns.md：先选物理动作，再选真实主物品；小黑象必须承担动作。
+       - references/qa-checklist.md：生成或交付前做 QA，Critical 任一失败就重写 prompt 或重生成。
+       - GOTCHAS.md：重点避开旧小黑/小黑人、3D 玩具小象、商品棚拍、close-up、标题化标签和物品堆叠。
+    3. 输出 shot list 时必须包含：主题、读者处境、核心冲突句、真实主物品、核心物理动作、小黑象动作、小黑象腿部锁定、小黑象占比锁定、中文短标签、3 秒读懂句、风险/避坑。
+    4. 进入生图时，最终 prompt 必须同时包含真实物品小现场、核心物理动作、2-4 个中文手写短标签、白色留白摄影棚，以及完整小黑象 2.0 IP lock。
+    5. QA 不通过时不要交付候选图；优先减少道具、拉远镜头、重写腿部/象鼻锁定，再重生成。
+
+    路由边界：
+    - 用户说“小黑象 2.0 / 真实物品 / 真实物件 / 物理动作 / 小现场 / 场景图 / 彩蛋长卷”时，用本 Skill。
+    - 用户只说“小黑象配图 / 白底手绘 / 正文插图”且没有 2.0 或真实物品要求时，改用 $xiaohei-elephant-illustrations。
+    - 旧版 $xiaohei-scenes 只作为旧“小黑”源码参考，不承接“小黑象”请求。
+policy:
+  allow_implicit_invocation: true
+
+required_references:
+  - references/xiaohei-elephant-ip-lock.md
+  - references/style-dna.md
+  - references/prompt-template.md
+  - references/object-patterns.md
+  - references/qa-checklist.md
+  - GOTCHAS.md
+
+routing:
+  accepts:
+    - "小黑象 2.0"
+    - "小黑象真实物品"
+    - "小黑象真实物件"
+    - "真实物品 + 物理动作"
+    - "小黑象场景图"
+    - "实物小现场"
+    - "小黑象 2.0 cover"
+    - "小黑象彩蛋长卷"
+  redirects:
+    xiaohei-elephant-illustrations: "普通小黑象白底手绘解释图、1.0 正文插图"
+    xiaohei-scenes: "旧版小黑源码参考；不承接小黑象请求"
+
+quality_gate:
+  critical_rejects:
+    - "缺少短象鼻、小耳朵、白点眼或四足短圆桩腿"
+    - "变成小黑人、旧小黑、黑色人形、火柴人或普通黑球"
+    - "出现二足站姿、人形腿、火柴腿、膝盖、脚掌或鞋子"
+    - "变成厚重 3D 玩具、写实象、萌宠、公仔、商品模型或近距离角色特写"
+    - "小黑象占比过大：标准图超过 3%-5% 画面高、cover 超过 4%-6% 画面高，或黑色体量没有比此前测试缩小到约 1/3"
+    - "没有真实物品或小黑象没有承担核心物理动作"
+    - "真实物品太多、画面像商品摄影/PPT/复杂信息图/商业海报"

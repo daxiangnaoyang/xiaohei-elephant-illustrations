@@ -1,5 +1,11 @@
 # 小黑象 2.0 GOTCHAS
 
+## OpenAI 入口为空
+
+- 现象：`SKILL.md` 和 `references/` 已经补了 2.0 规则，但 OpenAI 侧调用时仍像旧版小黑，或完全没吃到 `prompt-template.md`、`style-dna.md` 和母版锁定。
+- 原因：`agents/openai.yaml` 只有 `{}` 或只写了 display name，没有在 `default_prompt` 里显式要求读取 2.0 的共享约束和 QA。
+- 处理：`agents/openai.yaml` 必须把默认调用链写清楚：先 `Use $xiaohei-elephant-scenes`，再读取 `references/xiaohei-elephant-ip-lock.md`、`references/style-dna.md`、`references/prompt-template.md`、`references/object-patterns.md`、`references/qa-checklist.md` 和本文件；同时写清 2.0、1.0、旧版 `xiaohei-scenes` 的路由边界。
+
 ## 漂移成旧小黑
 
 - 现象：图里角色像黑色人形、小黑人、火柴人、圆头小黑，甚至没有象鼻。
@@ -15,14 +21,14 @@
 ## 比原版小黑 2.0 缺质感
 
 - 现象：小黑象变成厚重 3D 玩具小象，主物品和角色占比过大，中文标签像左右两侧大标题，彩色便签/抽屉/纸片面积过大，整体像商品棚拍或儿童玩具广告。
-- 原因：提示词只写死了“小黑象形体”，没有写死原版 `xiaohei-scenes` 的画面导演规则：中等偏轻占比、少道具、轻接触阴影、手写批注、颜色小点缀和一个明确物理动作。
-- 处理：生成前按 `references/style-dna.md` 的“原版小黑 2.0 质感锁定”重写 prompt；生成后按 `references/qa-checklist.md` 拦截 3D 玩偶化、商品摄影化、标题化标签、色块过载和 close-up。第一张候选不过关时，不调色微修，直接重写物件预算和镜头距离后重生成。
+- 原因：提示词只写死了“小黑象形体”，没有写死原版 `xiaohei-scenes` 的画面导演规则和小黑象自身占比。旧版小黑虽然高度约 8%-13%，但细胳膊细腿导致黑色体量很轻；小黑象是低矮实体剪影，同样高度会显得大且笨重。
+- 处理：生成前按 `references/style-dna.md` 的“原版小黑 2.0 质感锁定”重写 prompt；标准图小黑象高度锁到 3%-5% 画面高，cover 锁到 4%-6%，黑色视觉体量约为此前测试图的 1/3，且不得超过主物品高度的 1/3；生成后按 `references/qa-checklist.md` 拦截 3D 玩偶化、商品摄影化、标题化标签、色块过载和 close-up。第一张候选不过关时，不调色微修，直接重写物件预算、角色占比和镜头距离后重生成。
 
 ## 镜头太靠前，小黑象显笨重
 
 - 现象：角色和主物件离观众太近，小黑象圆胖、腿粗短、像摆件，画面失去原版小黑 2.0 那种轻巧、灵活、留白里的荒诞感。
 - 原因：提示词只说“小象”和“真实物品”，模型容易把它理解成玩具摄影或可爱小象模型；同时缺少明确的 camera pulled back / airy white space / nimble silhouette 约束。
-- 处理：标准图默认把镜头后退一档，整体场景只占画面中等偏小区域；小黑象写成 `small nimble solid black elephant silhouette`，强调短细腿、紧凑轻巧身体、动作拉伸感。出现 close-up、低机位英雄镜头、圆胖摆件感时直接重生成。
+- 处理：标准图默认把镜头后退一档，整体场景只占画面中等偏小区域；小黑象写成 `tiny nimble solid black elephant silhouette`，标准图高度 3%-5% 画面高，cover 高度 4%-6%，强调小执行者、紧凑轻巧身体、动作拉伸感。出现 close-up、低机位英雄镜头、圆胖摆件感或占比过大时直接重生成。
 
 ## 象腿漂移成小黑人腿
 
