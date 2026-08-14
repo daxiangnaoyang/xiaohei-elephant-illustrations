@@ -1,1 +1,81 @@
-{}
+interface:
+  display_name: "小黑象 2.0 真实物品场景图"
+  short_description: "生成小黑象 2.0 的真实物品小现场、21:9 cover、9:16 视频封面和彩蛋长卷"
+  default_prompt: |
+    Use $xiaohei-elephant-scenes for this request.
+
+    默认调用链：
+    1. 先判断模式：标准 16:9 正文图、21:9 cover、9:16 视频封面分支、或彩蛋长卷；用户未明确说 cover/视频封面/长卷时默认标准图。
+    2. 必须读取并执行这些共享约束：
+       - references/xiaohei-elephant-ip-lock.md：复制或等价包含 Xiaohei Elephant 2.0 IP lock，尤其是短象鼻、小耳朵、白点眼、四足短圆桩腿、禁止二足/人形腿，以及标准图 3%-5% / cover 4%-6% 的小黑象占比硬上限。
+       - references/style-dna.md：锁定原版小黑 2.0 质感，包括镜头后退、真实物品少而准、小黑象黑色视觉体量约为此前测试的 1/3、轻接触阴影、手写短标签、颜色只做小点缀。
+       - references/prompt-template.md：按对应模式组织最终生图 prompt，不临时手写一套平行模板。
+       - references/cover-typography-runtime-contract.md：Cover 字体唯一来源、一次成型、禁用 base/overlay 血缘、视觉 QA 阻断和字体运行回执。
+       - references/object-patterns.md：先选物理动作，再选真实主物品；小黑象必须承担动作。
+       - references/qa-checklist.md：生成或交付前做 QA，Critical 任一失败就重写 prompt 或重生成。
+       - references/scale-calibration.md：标准图把尺度补偿块放在 Prompt 前 8 行；首张以 1.5%-2.5% 为模型目标、以实际 3%-5% 为验收，并按 A/B/C 档重试。
+       - references/article-batch-character-lock.md：同一文章有 2 张及以上图片时，首张过 QA 后冻结为唯一角色母版；后续每张直接引用母版，同模式尺度相对母版偏差不超过 ±10%，禁止串联引用上一张。
+       - GOTCHAS.md：重点避开旧小黑/小黑人、3D 玩具小象、商品棚拍、close-up、标题化标签和物品堆叠。
+    3. 输出 shot list 时必须包含：主题、原始段落/小节正文、段落主旨/一句话结论、读者处境、输入/起始状态、核心冲突句、关键机制/组成（2-3 个信息节点）、结果/判断/边界、视觉关系类型、可见信息链、真实主物品、1-3 个辅助物品及各自语义职责、核心物理动作、小黑象动作、小黑象腿部锁定、小黑象占比锁定、3-5 个中文短标签、3 秒读懂句、风险/避坑。不要只从段落标题提炼主题。
+    4. 进入标准图生图时，Prompt 前 8 行先写尺度补偿锁：极远镜头、角色目标 1.5%-2.5%、主物品至少 6 倍高、65% 近白留白与“宁可放大物品也不放大角色”。随后加入段落级 INFORMATION DENSITY LOCK：用 1 个主物品加 1-3 个有语义职责的辅助物件，最多 4 个视觉单元，表达至少 3 层“处境/输入 -> 机制/主动作 -> 结果/边界”；按段落选择流程、因果、对比、组成、层级、决策门或闭环中的一种关系，用一条物理路径、箭头、分隔线、闸门或接触关系串联。最后写真实物品小现场、核心物理动作、3-5 个中文手写短标签、白色留白摄影棚与完整小黑象 2.0 IP lock。信息密度来自关系，不来自道具堆、长文字或卡片网格。角色超 5% 时，按 `scale-calibration.md` 的 B/C 档改构图重生，不能只重复原 Prompt。
+    5. Cover 模式必须额外读取并执行 `../wechat-tech-cover-image` 的封面原则。最终 prompt 必须完整填写：封面主题、主标题、1-2 个橙色标题重点词、底部金句、具体图解内容、真实主物品、小黑象核心动作、3 秒读懂句和 Allowed text 白名单。具体图解必须呈现“起点物件/困境 -> 小黑象用短象鼻执行动作 -> 结果/转折”，不能只画科技氛围底图。用户没给标题或金句时先生成，禁止把空变量传给图像模型。21:9 Cover 必须 one-pass integrated composition：背景、物件、小黑象、主标题、重点词、金句和必要标签由同一次 image_gen 生成。可先调用 `scripts/make_cover_typography_reference.py` 生成 ZCOOL KuaiLe 排版参考图并作为 image_gen 视觉参考，但禁止先出无字底图再本地叠字、贴标题卡或覆盖独立文字层。
+       如果是 9:16 视频封面分支，改用 `references/prompt-template.md` 的 9:16 模板：顶部 0%-12% 与底部 84%-100% 保留平台 UI 安全区，标题放 14%-32%，物理隐喻放 34%-72%，金句放 75%-83%；重新设计竖向构图，不得裁切、拉伸或加黑边复用 21:9。
+       Cover 运行时必须执行 `cover-typography-runtime-contract.md`：排版参考图只能作为 `TYPOGRAPHY_REFERENCE_ONLY` 输入；一次 image_gen 后只保留最终图和 `cover-typography-receipt.md`，禁止 `title-overlay-zcool.png`、透明文字 PNG、`*-base.*`、`*text-layer*`、`*composite*`、`*merged*`。视觉 QA 返回 400/429/不可用时只能记 `BLOCKED`，不得发送候选图；交付前运行 `scripts/validate_cover_typography_contract.py`。
+    6. 同文章多图不得一次全生：先让第 1 张通过 QA，把母版路径和模式尺度基准记入 `prompts/xiaohei-character-lock.md`；随后每张用同一母版单独生成、并排验收，过关后才继续。
+    7. QA 不通过时不要交付候选图；优先减少道具、拉远镜头、重写腿部/象鼻锁定，再重生成。
+
+    路由边界：
+    - 用户说“小黑象 2.0 / 真实物品 / 真实物件 / 物理动作 / 小现场 / 场景图 / 彩蛋长卷”时，用本 Skill。
+    - 用户只说“小黑象配图 / 白底手绘 / 正文插图”且没有 2.0 或真实物品要求时，改用 $xiaohei-elephant-illustrations。
+    - 旧版 $xiaohei-scenes 只作为旧“小黑”源码参考，不承接“小黑象”请求。
+policy:
+  allow_implicit_invocation: true
+
+required_references:
+  - references/xiaohei-elephant-ip-lock.md
+  - references/style-dna.md
+  - references/prompt-template.md
+  - references/cover-typography-runtime-contract.md
+  - references/object-patterns.md
+  - references/qa-checklist.md
+  - references/scale-calibration.md
+  - references/article-batch-character-lock.md
+  - templates/cover-typography-receipt.md
+  - GOTCHAS.md
+
+routing:
+  accepts:
+    - "小黑象 2.0"
+    - "小黑象真实物品"
+    - "小黑象真实物件"
+    - "真实物品 + 物理动作"
+    - "小黑象场景图"
+    - "实物小现场"
+    - "小黑象 2.0 cover"
+    - "小黑象 2.0 9:16 视频封面"
+    - "小黑象 2.0 竖版视频封面"
+    - "小黑象彩蛋长卷"
+  redirects:
+    xiaohei-elephant-illustrations: "普通小黑象白底手绘解释图、1.0 正文插图"
+    xiaohei-scenes: "旧版小黑源码参考；不承接小黑象请求"
+
+quality_gate:
+  critical_rejects:
+    - "缺少短象鼻、小耳朵、白点眼或四足短圆桩腿"
+    - "变成小黑人、旧小黑、黑色人形、火柴人或普通黑球"
+    - "出现二足站姿、人形腿、火柴腿、膝盖、脚掌或鞋子"
+    - "变成厚重 3D 玩具、写实象、萌宠、公仔、商品模型或近距离角色特写"
+    - "小黑象占比过大：标准图超过 3%-5% 画面高、cover 超过 4%-6% 画面高，或黑色体量没有比此前测试缩小到约 1/3"
+    - "同一文章同模式多图没有直接引用唯一角色母版，或尺度相对母版漂移超过 ±10%"
+    - "后续图使用上一张成图作为新母版，导致串联漂移"
+    - "没有真实物品或小黑象没有承担核心物理动作"
+    - "标准图只摘了主题名词，缺少段落的机制、结果或边界，无法看出输入 -> 机制 -> 结果关系"
+    - "辅助物件没有对应段落信息职责，或画面有孤立物件排队、卡片网格、节点墙和复杂 PPT 信息图"
+    - "真实物品太多、画面像商品摄影/PPT/复杂信息图/商业海报"
+    - "cover 缺少主题、主标题、底部金句或具体图解内容，或只有抽象科技氛围底图"
+    - "cover 采用先出无字底图再本地叠字、贴白色标题卡或覆盖独立文字层，而不是一体成型"
+    - "cover 标题与背景、物件、小黑象的纹理、光影、透视和视觉动线脱节，像 PPT 文字压在照片上"
+    - "cover 生成或引用 title-overlay-zcool.png、透明文字 PNG、*-base.*、*text-layer*、*composite* 或 *merged* 等独立文字/合成中间产物"
+    - "cover 视觉 QA 返回 400、429、余额不足、超时、不可用或没有 cover-typography-receipt.md 回执，却仍把候选图当正式图发送"
+    - "cover 标题字形漂移成标准科技黑体、几何尖角字、网页/UI 字体或白字发光；即使文字逐字正确也必须拒绝"
+    - "9:16 视频封面没有顶部/底部平台 UI 安全区，或直接裁切、拉伸、加黑边复用 21:9 横版构图"
