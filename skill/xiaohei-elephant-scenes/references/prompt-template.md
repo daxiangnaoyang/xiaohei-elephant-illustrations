@@ -12,8 +12,8 @@ SCALE IS THE FIRST PRIORITY.
 Use an extreme wide, pulled-back camera.
 The elephant is a tiny distant worker: target only 1.5%-2.5% of full canvas height.
 The main real object is at least 6x taller than the elephant.
-The scene is small and airy: main object group 42%-56% canvas width, 24%-34% canvas height.
-Keep 65% or more of the canvas as clean near-white empty space.
+The real-object tableau follows the selected density mode: D1 = 42%-56% canvas width and 24%-34% height; D2 = 50%-64% width and 28%-40% height; D3 = 56%-70% width and 32%-48% height.
+Keep the camera pulled back and preserve generous near-white space: 65%+ for D1, 55%+ for D2, and 48%+ for D3.
 If the elephant would be larger to make its action readable, make the OBJECT larger instead; never enlarge the elephant.
 ```
 
@@ -38,25 +38,31 @@ The master remains unchanged for every image in this article; never use the prev
 ```text
 原始段落 / 小节正文：{完整段落文本；不能只填标题或主题}
 段落主旨 / 一句话结论：{这一段真正想让读者理解或记住的判断}
+段落类型 / 结构：{单一判断 / 因果机制 / 流程步骤 / 对比转折 / 组成层级 / 决策筛选 / 反馈闭环 / 案例复盘，选一个主结构}
 读者处境 / 输入问题：{这一段回应的具体问题、卡点或起始状态}
-关键机制 / 组成：{2-3 个必须被看见的中间信息节点}
+独立信息节点：{不要只列主题词；列出段落中不能互相替代的输入、机制、角色、条件、阶段、证据、结果或边界}
+必须看见的节点及承载方式：{节点 1 -> 真实物件/状态；节点 2 -> 动作/空间位置；节点 3 -> 结果/短标签；必要时继续列到节点 6}
 结果 / 判断 / 边界：{动作完成后发生什么，或这一段给出的限制条件}
+密度档位：{D1 轻量 / D2 解释型 / D3 综合型；按下方规则选择，不得默认 D1}
 视觉关系类型：{流程 / 因果 / 对比 / 组成 / 层级 / 闭环 / 决策门，选一个}
 可见信息链：{输入/困境} -> {机制/小黑象动作} -> {输出/结果/边界}
-3 秒读懂句：{不看正文时，观众第一眼应该读出的完整意思}
+3 秒读懂句：{不看正文时，观众第一眼应该读出的“处境/动作/结果”完整意思}
 可选段落锚点短句：{4-8 个字；只有关系不够清楚时使用，不写成长标题}
 ```
 
-INFORMATION DENSITY LOCK:
+DENSITY CALIBRATION LOCK:
 
 ```text
-This is a paragraph-level visual summary, not a single-topic decorative illustration.
-Show one clear paragraph thesis, the concrete context or input problem, the key mechanism, and the visible result or boundary. Encode at least three of these layers, with the thesis and the result readable at thumbnail size.
-Use one hero real object plus 1-3 semantically necessary supporting objects, maximum 4 visual units in total. Every supporting object must represent a named fact, role, stage, constraint, or outcome from the paragraph; remove any object that is only decoration.
-Choose one visual grammar that matches the paragraph: a left-to-right physical chain for process or causality, a before/after split for contrast, nested or stacked objects for composition or hierarchy, a gate or filter for decision, or one curved path for a loop.
-Connect the visual units with one clear hand-drawn path, arrow, divider, barrier, or contact relationship. The relationships must explain how the information works; do not place isolated objects in a row and do not build a card grid, dashboard, or PPT infographic.
-Use 3-5 short Chinese annotation labels, each 2-5 words, attached to the relevant object, stage, relationship, or boundary. Labels name information; they are not decorative slogans and must not become paragraphs.
-Information density must come from hierarchy and relationships, not from more props, more text, or more color. Keep the composition simple, airy, and physically believable.
+This is a paragraph-level visual summary, not a single-topic decorative illustration. First understand the complete paragraph and count its independent information nodes; do not automatically render every paragraph as a minimal two-object metaphor.
+DENSITY MODE D1 - LIGHT: Use only when the paragraph contains one independent claim, one main condition, and one visible action or state change. Use 1 hero real object plus 1 supporting object, 2-3 short labels, and 2-3 visible information nodes. D1 is an exception, not the default.
+DENSITY MODE D2 - EXPLANATORY DEFAULT: Use for a normal explanatory paragraph with a claim, a concrete context, 1-2 mechanisms, and a result or boundary. Use 1 hero real object plus 2-3 semantically necessary supporting objects, 3-4 real-object/state units, 4-5 short labels, and 3-4 visibly connected information nodes.
+DENSITY MODE D3 - COMPREHENSIVE: Use when the paragraph contains a causal chain, 3 or more steps/elements, multiple roles or conditions, a comparison/turn, a decision branch, feedback, or a result with an explicit boundary. Use 1 hero real object or compact hero group plus 3-5 semantically necessary supporting objects/state units, 4-6 real-object/state units, 5-7 short labels, and 4-6 visibly connected information nodes. D3 is still one coherent physical tableau, not a card grid or PPT infographic.
+The density mode is a content decision, not a decoration preference. A paragraph containing words or logic such as “因为/所以/但是/如果/同时/最终/第一/第二/否则”, multiple independent verbs, or a list of stages must not be compressed into D1 just to preserve empty space.
+Every required node must have a visible encoding: a real object, object state, spatial position, physical contact/action, relationship line, or short label. Do not merge mechanism, condition, and result into one generic object or one vague slogan.
+Choose one visual grammar that matches the paragraph: a left-to-right or foreground-to-background physical chain for process/causality, a before/after split for contrast, nested or stacked objects for composition/hierarchy, a gate/filter with a visible branch for decision, or one curved path with 3-5 physical nodes for a loop.
+Use one main physical action chain; D3 may add one branch, gate, or before/after turn when the paragraph requires it. Connect the visual units with a clear hand-drawn path, arrow, divider, barrier, contact relationship, or state change. Do not place isolated objects in a row.
+Use D1: 2-3, D2: 4-5, or D3: 5-7 short Chinese annotation labels, each 2-6 characters, attached to the relevant object, stage, relationship, or boundary. Labels name information; they are not decorative slogans and must not become paragraphs.
+More information must be expressed through hierarchy, state changes, and relationships before adding color or text. Keep the camera pulled back, the elephant tiny, and the scene physically believable; expand the real-object tableau when density rises, never enlarge the elephant or move into a close-up.
 ```
 
 主题：{主题}
@@ -66,12 +72,14 @@ Information density must come from hierarchy and relationships, not from more pr
 画面：
 纯白或接近纯白摄影棚背景，大量留白。
 段落主旨必须通过可见结构表达：{段落主旨 / 一句话结论}。
+段落类型与密度档位：{段落类型} / {D1、D2 或 D3}；该档位选择依据：{独立信息节点数量与段落逻辑}
+必须看见的信息节点：{节点 1}、{节点 2}、{节点 3}、{节点 4；D3 可继续到节点 6}；每个节点的视觉承载：{物件 / 状态 / 动作 / 位置 / 关系线 / 短标签}
 真实主物品是：{真实主物品}，它承载段落的主论点。
-辅助物品是：{辅助物品 1}、{辅助物品 2}、{辅助物品 3；没有必要时删除}；每个辅助物品分别承载：{对应信息节点}。
+辅助物品 / 状态单元是：{按 D1/D2/D3 填 1 / 2-3 / 3-5 个}；每个辅助物品或状态单元分别承载：{对应信息节点与语义职责}。
 画面结构是：{视觉关系类型}，严格呈现：{可见信息链}。
 核心物理动作是：{核心物理动作}；小黑象正在：{小黑象动作}。
 结果或边界必须在画面中可见：{结果 / 判断 / 边界}。
-关系标记是：{一条手绘路径 / 箭头 / 分隔线 / 闸门 / 接触关系；只选必要的一个主关系}。
+关系标记是：{一条主路径 / 箭头 / 分隔线 / 闸门 / 接触关系；D3 只允许额外一个分支或前后转折}。
 可选段落锚点短句：{4-8 个字；没有必要时删除，不生成占位文字}。
 
 真实品牌标识规则：
@@ -85,8 +93,10 @@ Information density must come from hierarchy and relationships, not from more pr
 - Treat the original Xiaohei Scenes 2.0 examples as the quality bar for restraint, whitespace, object realism, sparse labels, and clear physical action.
 - Pull the camera back. Scene footprint should be small-to-medium and airy: about 46%-58% of canvas width and 26%-38% of canvas height.
 - Scale down the Xiaohei Elephant itself aggressively. In standard 16:9 images, the elephant height should be only 3%-5% of canvas height, and its black visual mass should feel about one third of the previous oversized elephant tests. The elephant must be clearly smaller than the main real object, never taller than one third of the main object's height.
-- One hero real object or one compact hero object group, plus only 1-3 semantically necessary supporting objects; maximum 4 visual units total. Every support object must map to a paragraph information node, stage, role, result, or boundary. Do not add props merely to make the scene feel richer.
-- Use a simple paragraph-level visual structure: one main thesis, 2-3 supporting facts, and one visible result or boundary. Show the relationship between them through physical contact, one hand-drawn path, a gate, a divider, or a clear before/after arrangement. Never turn the scene into a card grid, dashboard, node wall, or dense PPT infographic.
+- Do not force every paragraph into the same sparse composition. D1 is only for a genuinely single-claim paragraph; D2 is the default for explanatory paragraphs; D3 is required when the paragraph contains multiple mechanisms, stages, roles, conditions, comparisons, branches, or boundaries.
+- D1 uses 1 hero + 1 support; D2 uses 1 hero + 2-3 supports; D3 uses 1 hero/compact hero group + 3-5 supports or state units. Every unit must map to a named paragraph node, stage, role, condition, result, or boundary; no decorative props.
+- Use one coherent paragraph-level visual structure: process/causality, before/after, nested composition, gate/filter, or feedback path. D3 may show a compact foreground/midground/background chain or one visible branch, but never a card grid, dashboard, node wall, or dense PPT infographic.
+- The whole paragraph must be readable from the visible combination of objects, states, actions, relationships, and short labels; do not rely on the article text to supply the missing mechanism or result.
 - Keep the whole image airy with generous empty white space around the scene. Do not make a close-up, low-angle hero shot, product hero shot, toy photography poster, or dense object pile.
 - Use only very light contact shadows under objects and the elephant. No grey background, no vignette, no gradient, no heavy studio shadow.
 - The image must still read as one strange but precise physical moment, not a concept poster.
@@ -107,7 +117,7 @@ A tiny solid BLACK baby elephant with these EXACT features:
 - The trunk does the reaching or touching action. Do not give the elephant human arms or hands.
 
 文字：
-3-5 个中文手写短标签：{中文短标签}
+中文手写短标签：{D1 填 2-3 个；D2 填 4-5 个；D3 填 5-7 个}
 标签要短、清楚、像手写批注；每条标记一个信息节点、关系或边界，不要长句，不要标题，不要把整段正文缩写进图里。
 如确有必要，可加入一条 4-8 字的段落锚点短句；它只能帮助读者抓住主旨，不得变成海报标题或正文段落。
 Labels should sit close to the object or action like annotations, underlines, arrows, or tiny notes. Do not put oversized title-like slogans on both sides of the image.
@@ -120,7 +130,7 @@ Color restraint: keep black lines and text on a pure or near-white background. U
 少量蓝 / 黄 / 红 / 橙点缀。彩色只做节奏点，4-6 个小点缀即可；不要大面积彩色便签堆、彩色抽屉标签或彩色纸片铺满画面。
 
 避免：
-PPT 信息图、卡片网格、节点墙、复杂流程图、UI 截图、仪表盘、科技 HUD、商业海报、深色背景、没有关系的物件排队、物品堆满、商品摄影感、玩具棚拍感、近距离特写、低机位英雄镜头、笨重圆胖小象、二足站姿、人形腿、火柴腿、鞋子脚掌、中文错字、大段文字、小黑象站在旁边不动、只画主题名词而不表达机制和结果。
+PPT 信息图、卡片网格、节点墙、复杂流程图、UI 截图、仪表盘、科技 HUD、商业海报、深色背景、没有关系的物件排队、无语义的物品堆满、商品摄影感、玩具棚拍感、近距离特写、低机位英雄镜头、笨重圆胖小象、二足站姿、人形腿、火柴腿、鞋子脚掌、中文错字、大段文字、小黑象站在旁边不动、把解释型段落压成一个主题物件、D2/D3 段落误用 D1、只画主题名词而不表达机制和结果。
 ```
 
 ## Cover 版 21:9 单图
@@ -268,43 +278,47 @@ COVER TYPOGRAPHY RUNTIME CONTRACT:
 21:9 横版直接裁切、横向道具排队、顶部贴边标题、底部 UI 区放字、标题超过两行、长副标题、字幕条、播放按钮、头像、点赞评论图标、时间戳、复杂 HUD、节点墙、流程图、过多物件、黑底黑象看不清、小黑象过大、二足站姿、人形腿、火柴腿、脚掌鞋子、旧版小黑、小黑人、3D 玩偶象、萌宠象、品牌广告 KV、中文错字、伪文字。
 ```
 
-## 9:16 折扇扇面视觉分支（Fan Surface Variant）
+## 9:16 扇面内容视觉分支（Fan-Surface Content Variant）
 
 ```text
-生成一张 9:16 竖版中文短视频封面图。使用真实手持打开的折扇作为唯一主物件，把已确认视频文稿压缩成“扇面上的一个核心判断”。这是独立的折扇扇面构图，不是 21:9 横版封面裁切，不是普通扇子图标，也不是信息图海报。
+生成一张 9:16 竖版中文短视频封面图。使用“扇面内容”作为平面主画布，把已确认视频文稿压缩成“一个版面上的核心判断”。这是平面内容构图，不是实体折扇，不是手持实拍，不是扇子图标，也不是 21:9 横版封面裁切。
 
 封面主题：{{TOPIC}}
 主标题（逐字准确显示）：{{TITLE_TEXT}}
 标题重点词：{{TITLE_EMPHASIS}}
 文稿一句话核心判断：{{SCRIPT_CORE}}
-封面级视觉隐喻：{{VISUAL_METAPHOR}}
-扇面主强调色：{{ACCENT_COLOR}}
-扇面周边手写批注：{{SIDE_NOTES}}
-扇面小线稿符号：{{DOODLES}}
-背景环境：{{BACKGROUND_CONTEXT}}
+扇面内容画布样式：{{SURFACE_STYLE}}
+版面主强调色：{{ACCENT_COLOR}}
+气泡批注文字：{{SIDE_NOTES}}
+批注气泡框：{{CALLOUT_BUBBLES}}
+卡通简笔图标：{{CARTOON_ICONS}}
+红色印章/印记：{{RED_SEALS}}
+背景平面：{{BACKGROUND_CONTEXT}}
 底部金句（逐字准确显示）：{{BOTTOM_QUOTE}}
 
 品牌主元素（必须出现且只能选一个模式）：{{BRAND_ANCHOR_MODE}}
-品牌锚点的位置与动作：{{BRAND_ANCHOR_ACTION}}
+品牌锚点的平面位置与视觉关系：{{BRAND_ANCHOR_RELATION}}
 
 参考图反推的不变量：
-- 一把被真实手持打开的折扇，扇面由多个可见折片组成；顶部边缘有连续折线/波折形，黑色扇骨和手在下方形成真实支撑。
-- 扇面底色为浅蓝、灰白或半透明纸/布料，保留折痕、纤维、透光和轻微不平整。
-- 中央视觉是 {{ACCENT_COLOR}} 的手绘泼墨/刷痕色块，黑色中文手写大字直接写在扇面上。
-- 扇面边缘分布少量手写短批注、圈选、箭头、信封/闪电/印章等线稿；这些符号必须服务 {{SCRIPT_CORE}}，不要堆成 PPT。
-- 背景是明亮自然日光下的真实生活环境，浅蓝天空、树影、道路或等价的柔焦环境；扇面清晰，背景浅景深虚化。
+- 一块平面扇面内容画布，浅蓝、灰白或暖白底，允许纸张纤维和轻微不规则边缘，但不能出现扇片、扇骨、扇柄、折痕、手或可辨识的扇形实体轮廓。
+- 中央视觉是 {{ACCENT_COLOR}} 的手绘泼墨/刷痕色块，黑色中文手写大字直接融入平面内容画布。
+- {{SIDE_NOTES}} 分别放在 2-4 个不规则手绘气泡框中，气泡有箭头或尾巴指向相关标题词、图标或色块，形成“问题 / 机制 / 结果或边界”的辅助阅读路径。
+- {{CARTOON_ICONS}} 是 2-4 个与 {{SCRIPT_CORE}} 直接相关的卡通简笔图标，线条轻、尺寸小，不是随机贴纸墙。
+- {{RED_SEALS}} 是 1-2 个朱红色手绘印章/印记，作为内容节奏点；除非用户提供官方资产，不得把它画成官方品牌 logo 或公章。
+- 背景是极简浅色平面、纸张肌理或柔和留白，不使用户外道路、树影、天空和手持摄影背景。
 
 9:16 手机安全区与构图：
 - 顶部 0%-10% 与底部 84%-100% 保持低信息密度，不能放主标题、金句、品牌锚点或关键动作。
-- 打开的折扇占画面中上部约 60%-70%，扇面是第一视觉中心，左右展开但不被画面边缘粗暴截断。
-- 主标题位于扇面中央约 28%-55% 区域，最多两行，建议 4-8 个汉字；标题必须像被写在扇面上，而不是后贴的海报字。
-- {{SIDE_NOTES}} 分布在相邻扇片的留白处，每条短小，形成“问题 / 机制 / 结果或边界”的辅助阅读路径。
-- 手、扇骨和扇柄位于约 68%-84% 区域；{{BOTTOM_QUOTE}} 放在扇面下部或靠近扇骨的安全内容区，字号明显小于主标题。
-- 画面只保留一个扇面主动作/隐喻，扇片之间形成自然的放射结构；不要额外加入第二把扇子、人物群像或横向道具排队。
+- 平面内容画布占画面中央约 78%-88%，四周保留留白，不做扇形裁切或实体边缘。
+- 主标题位于中央约 26%-58% 区域，最多两行，建议 4-8 个汉字；标题必须像版面原生手写内容，而不是后贴的海报字。
+- {{CALLOUT_BUBBLES}} 分布在主标题左右或上下，2-4 个即可；气泡框不能遮住主标题，文字必须短。
+- {{CARTOON_ICONS}} 分布在气泡与泼墨边缘，2-4 个即可；每个图标都服务一个文稿信息点。
+- {{RED_SEALS}} 放在中下部或版面角落，1-2 个即可；{{BOTTOM_QUOTE}} 放在 76%-84% 内容区，字号明显小于主标题。
+- 画面只保留一个版面级核心判断，不加入真实人物、第二套版面、商品道具或横向信息卡排队。
 
 品牌锚点规则：
-- 如果 {{BRAND_ANCHOR_MODE}} = 小黑象：加入一只非常小的黑色小象，固定为哑光黑实心剪影、短象鼻、小圆耳、白点眼、四足短圆桩腿、低矮轻巧身体。它必须与扇面发生真实接触，例如用短象鼻压住一片扇片、牵住一条批注线、推动一个小印章或指向主标题重点词；不能站在角落装饰。
-- 如果 {{BRAND_ANCHOR_MODE}} = 官方大象 logo：只使用用户/项目提供的官方大象 logo 作为扇面小印章、扇片角标或扇柄标记，必须贴在真实物件上、尺寸克制、颜色准确；不得凭空编造 logo、品牌名或宣传口号，也不能做成品牌广告 KV。
+- 如果 {{BRAND_ANCHOR_MODE}} = 小黑象：加入一只非常小的平面黑色小象标记，固定为哑光黑实心剪影、短象鼻、小圆耳、白点眼、四足短圆桩腿、低矮轻巧身体。它可以用短象鼻指向主标题重点词、牵住气泡尾巴或压住一条下划线；必须与版面内容有清晰关系，不能漂浮在角落装饰。
+- 如果 {{BRAND_ANCHOR_MODE}} = 官方大象 logo：只使用用户/项目提供的官方大象 logo 作为平面版面中的小印章、角标或标题旁识别标记，必须贴合画面内容、尺寸克制、颜色准确；不得凭空编造 logo、品牌名或宣传口号，也不能做成品牌广告 KV。
 - 两种模式不能同时出现；若变量为空，默认使用“小黑象”。没有品牌锚点的成图直接判失败。
 
 小黑象 2.0 锁定（仅在品牌模式选择小黑象时生效）：
@@ -314,31 +328,33 @@ The trunk performs the main action. Do not add human arms or hands.
 No biped pose, no human legs, no stick legs, no knees, no feet, no shoes.
 Not a humanoid Xiaohei, not a black human silhouette, not a stick figure, not a robot, not a bear, not a pig.
 Not a glossy 3D toy, not plush mascot, not realistic elephant figurine, not a cute children's character, not a heavy round statue.
-Scale lock: in this 9:16 cover, the elephant height is only 4%-6% of the canvas height and never exceeds one third of the main fan's visual height.
+Scale lock: in this 9:16 cover, the elephant height is only 4%-6% of the canvas height and never exceeds one third of the main content canvas height.
 
 文字与字体：
-- 主标题必须逐字显示“{{TITLE_TEXT}}”，直接融入扇面材质；使用粗重、略不规则、友好但有笔锋的中文手写/毛笔字，参考 ZCOOL KuaiLe 的圆润手写气质，不使用标准科技黑体、UI 字体或白字发光。
+- 主标题必须逐字显示“{{TITLE_TEXT}}”，直接融入平面扇面内容画布；使用粗重、略不规则、友好但有笔锋的中文手写/毛笔字，参考 ZCOOL KuaiLe 的圆润手写气质，不使用标准科技黑体、UI 字体或白字发光。
 - 标题主字使用炭黑/深墨色；“{{TITLE_EMPHASIS}}”使用 {{ACCENT_COLOR}} 的刷色强调；周边批注使用深灰或同一主强调色的低饱和变化。
-- 底部金句必须逐字显示“{{BOTTOM_QUOTE}}”，只保留一句，短于主标题，融入扇片或扇骨附近的手写质感。
-- Allowed text only：{{TITLE_TEXT}}；{{BOTTOM_QUOTE}}；{{SIDE_NOTES}} 中实际选用的 2-4 条短批注；必要时只保留 1 个短品牌字样。不要生成额外伪文字、英文乱字、乱码、水印、平台按钮、播放图标、头像、点赞评论图标、时间戳或可读 HUD 小字。
+- 底部金句必须逐字显示“{{BOTTOM_QUOTE}}”，只保留一句，短于主标题，融入平面内容画布下部的手写质感。
+- 气泡框内只放 {{SIDE_NOTES}} 中实际选用的 2-4 条短批注；卡通图标和红色印章不生成长句。印章如需文字，只使用 {{RED_SEALS}} 中已确认的短词。
+- Allowed text only：{{TITLE_TEXT}}；{{BOTTOM_QUOTE}}；气泡中的 2-4 条 {{SIDE_NOTES}}；{{RED_SEALS}} 中已确认的短词；必要时只保留 1 个短品牌字样。不要生成额外伪文字、英文乱字、乱码、水印、平台按钮、播放图标、头像、点赞评论图标、时间戳或可读 HUD 小字。
 
 ONE-PASS INTEGRATED COMPOSITION LOCK:
-- 在同一次 image_gen 中同时生成折扇、手、扇骨、环境、主标题、扇面泼墨、周边批注、底部金句和品牌锚点。
-- 文字是扇面材质的一部分，必须共享折痕、透光、墨迹边缘、自然光和透视关系；禁止先生成无字扇面，再本地叠字、贴标题卡或生成独立 logo/文字层。
+- 在同一次 image_gen 中同时生成平面内容画布、主标题、泼墨、气泡批注、卡通简笔图标、红色印章、底部金句和品牌锚点。
+- 文字、气泡、图标和印章必须共享纸面纹理、墨迹边缘、手绘线条和版式关系；禁止先生成无字底图，再本地叠字、贴标题卡或生成独立 logo/文字层。
 - 可以把本次标题和金句的 ZCOOL KuaiLe 排版参考图作为 `TYPOGRAPHY_REFERENCE_ONLY` 输入，但它不是文字层、mask 或合成素材。
 - 每个候选只允许一次 image_gen；文字不稳定时缩短文案、减少批注并重新生成完整候选，不得后期修字。
 
 避免：
-21:9 横版裁切、横向海报、普通扇子图标、第二把扇子、人物群像、暗黑科技背景、HUD 大屏、PPT 信息图、卡片网格、商品棚拍、3D 玩具、塑料扇、廉价旅游纪念品、扇面文字过多、扇片乱码、复制参考图原有题字/印章、平台 UI、字幕条、品牌 logo 漂浮或错误、虚构品牌、品牌锚点缺失、小黑人、人形小黑、二足站姿、人形腿、火柴腿、脚掌鞋子、萌宠象、厚重圆胖小象、主标题不在扇面上、金句落入底部 UI 区。
+21:9 横版裁切、实体折扇、扇片、扇骨、扇柄、手持摄影、折痕、普通扇子图标、第二套版面、人物群像、户外道路树影背景、暗黑科技背景、HUD 大屏、PPT 信息图、卡片网格、商品棚拍、扇面文字过多、气泡框堆叠、随机贴纸、红色公章、复制参考图原有题字/印章、平台 UI、字幕条、品牌 logo 漂浮或错误、虚构品牌、品牌锚点缺失、小黑人、人形小黑、二足站姿、人形腿、火柴腿、脚掌鞋子、萌宠象、厚重圆胖小象、主标题不在平面内容画布上、金句落入底部 UI 区。
 ```
 
-### 折扇模板的变量填充顺序
+### 扇面内容模板的变量填充顺序
 
 1. 先读已确认文稿，提炼 `{{SCRIPT_CORE}}`，再写 `{{TITLE_TEXT}}` 和 `{{BOTTOM_QUOTE}}`；不得从参考图抄题字。
-2. 用一个具体动作把抽象内容落到扇面：例如“把混乱信息展开成可执行清单”“把未经验证的结论挡在扇外”“把工具选择画成一条分岔路”。不把所有名词都画成图标。
-3. `{{SIDE_NOTES}}` 只保留 2-4 条，优先从文稿中选“处境、机制、结果/边界”各一条；没有依据的数字、品牌名和案例写 `未获取`，不补造。
-4. `{{BRAND_ANCHOR_MODE}}` 默认填“小黑象”。只有用户明确选择官方 logo，或项目已经提供官方 logo 参考资产时，才填“官方大象 logo”。
-5. 生成前必须把完整变量值写入项目的 `prompts/video-cover-fan-prompt.md`；生成后按 `references/qa-checklist.md` 的 `9:16 Video Cover Branch` 和 `Fan Surface Variant` 两组检查。
+2. 把抽象内容压缩成一个平面版式关系：例如“问题气泡围住错误判断”“图标沿箭头指向可执行动作”“红色印章标记已确认边界”。不把所有名词都画成图标。
+3. `{{SIDE_NOTES}}` 只保留 2-4 条，全部放入 `{{CALLOUT_BUBBLES}}`；优先从文稿中选“处境、机制、结果/边界”各一条；没有依据的数字、品牌名和案例写 `未获取`，不补造。
+4. `{{CARTOON_ICONS}}` 只选 2-4 个与文稿有直接关系的卡通简笔图标；`{{RED_SEALS}}` 只选 1-2 个朱红印章/印记，不生成虚构公章。
+5. `{{BRAND_ANCHOR_MODE}}` 默认填“小黑象”。只有用户明确选择官方 logo，或项目已经提供官方 logo 参考资产时，才填“官方大象 logo”。
+6. 生成前必须把完整变量值写入项目的 `prompts/video-cover-fan-prompt.md`；生成后按 `references/qa-checklist.md` 的 `9:16 Video Cover Branch` 和 `Fan Surface Variant` 两组检查。
 
 ## 彩蛋长卷
 
