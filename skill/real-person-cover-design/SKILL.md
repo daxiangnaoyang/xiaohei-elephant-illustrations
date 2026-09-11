@@ -1,6 +1,6 @@
 ---
 name: real-person-cover-design
-description: "Use when creating or editing a real-person article, newsletter, video, or Xiaohongshu cover from user-supplied identity references; route 3:4 and 21:9 layouts, preserve one person and one pose, generate readable text in one pass, and keep private assets out of the deliverable."
+description: Use when creating or editing a real-person article, newsletter, video, or Xiaohongshu cover from user-supplied identity references; route 3:4 and 21:9 layouts, preserve one person and one pose, generate readable text in one pass, and keep private assets out of the deliverable.
 version: 1.0.0
 author: Community contribution
 license: MIT
