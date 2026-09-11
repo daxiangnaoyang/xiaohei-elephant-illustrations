@@ -6,7 +6,9 @@
 
 - `SKILL.md`：触发条件、隐私边界、工作流和验收标准
 - `references/style-library.md`：九种可重组的视觉语言
-- `references/prompt-template.md`：一体成型生图 Prompt 模板
+- `references/prompt-template.md`：通用 Prompt 路由和共用约束
+- `references/prompt-template-single-cover.md`：小红书 3:4 真人主封面 Prompt
+- `references/prompt-template-carousel.md`：小红书 3:4 四页/多页图文卡片 Prompt
 - `references/qa-checklist.md`：身份、文字、画幅、证据和透明度检查
 - `templates/cover-brief.md`：开始前的最小 Brief
 - `GOTCHAS.md`：公开发布前的脱敏和常见翻车点

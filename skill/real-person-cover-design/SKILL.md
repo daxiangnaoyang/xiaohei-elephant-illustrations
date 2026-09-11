@@ -89,7 +89,7 @@ Completion criterion: `style + first center + supporting center + allowed elemen
 
 Use the built-in `image_gen` tool when available. For a transparent cutout, request a genuine transparent background and preserve the alpha channel. For a finished cover, ask for the person, title, objects, background, and decoration to be formed in one image-generation pass; do not create a blank background and add the title later.
 
-Use [references/prompt-template.md](references/prompt-template.md) to structure the request. State the exact text whitelist, ratio, identity invariants, safe area, and negative constraints twice when text or identity is critical.
+Use [references/prompt-template.md](references/prompt-template.md) to route the request. For Xiaohongshu, use [references/prompt-template-single-cover.md](references/prompt-template-single-cover.md) for one 3:4 cover or [references/prompt-template-carousel.md](references/prompt-template-carousel.md) for a four-page or multi-page carousel. State the exact text whitelist, ratio, identity invariants, safe area, and negative constraints twice when text or identity is critical.
 
 If the environment cannot generate images, return the completed prompt and a clear input list instead of claiming that an image was generated.
 

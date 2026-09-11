@@ -1,4 +1,11 @@
-# Real-Person Cover Prompt Template
+# Real-Person Cover Prompt Router
+
+For a Xiaohongshu deliverable, choose one of the two dedicated templates first:
+
+- [Single cover](prompt-template-single-cover.md)：一张真人主封面，3:4 竖版；
+- [Carousel](prompt-template-carousel.md)：四页或多页图文卡片，逐页生成，3:4 竖版。
+
+The shared template below is useful when the channel is not yet decided or when the image needs a non-Xiaohongshu ratio. It contains the common identity, pose, text, and evidence constraints.
 
 Fill the fields before calling an image tool. Keep the wording short enough to inspect.
 
