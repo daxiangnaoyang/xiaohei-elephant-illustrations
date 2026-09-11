@@ -24,14 +24,15 @@ Xiaohei Elephant Illustrations 是一个面向中文内容创作的 AI 绘图 Sk
 
 ---
 
-## 两个版本
+## 三个版本
 
 | 版本 | Skill | 视觉核心 | 适合内容 |
 | --- | --- | --- | --- |
 | 1.0 | `xiaohei-elephant-illustrations` | 白底手绘解释图 | 方法论、流程、结构、认知拆解、公众号正文插图 |
 | 2.0 | `xiaohei-elephant-scenes` | 真实物品 + 物理动作的小现场 | 处境共鸣、工作压力、AI 工具链崩溃、项目复盘、个人经历、彩蛋长卷 |
+| Cover | `real-person-cover-design` | 真人身份 + 单一姿势 + 平台画幅 | 文章头图、视频封面、小红书 3:4 封面 |
 
-1.0 更像在白纸上画出一个认知动作。2.0 更像在白色摄影棚里搭出一个真实物品小现场。
+1.0 更像在白纸上画出一个认知动作。2.0 更像在白色摄影棚里搭出一个真实物品小现场。Cover 版本则把真人身份、姿势、平台比例和标题层级拆开管理。
 
 ---
 
@@ -168,6 +169,12 @@ ln -s "$(pwd)/skill/xiaohei-elephant-illustrations" "${CODEX_HOME:-$HOME/.codex}
 ln -s "$(pwd)/skill/xiaohei-elephant-scenes" "${CODEX_HOME:-$HOME/.codex}/skills/xiaohei-elephant-scenes"
 ```
 
+复制或软链接真人封面 Skill：
+
+```bash
+ln -s "$(pwd)/skill/real-person-cover-design" "${CODEX_HOME:-$HOME/.codex}/skills/real-person-cover-design"
+```
+
 如果你使用的是 Hermes / Claude Code 运行时，把目标目录替换成对应的 Skill root。
 
 真正需要安装到 Agent 运行时的是：
@@ -175,6 +182,7 @@ ln -s "$(pwd)/skill/xiaohei-elephant-scenes" "${CODEX_HOME:-$HOME/.codex}/skills
 ```text
 skill/xiaohei-elephant-illustrations/
 skill/xiaohei-elephant-scenes/
+skill/real-person-cover-design/
 ```
 
 根目录的 README、docs、assets 和 examples 是 GitHub 分享文档。
@@ -314,7 +322,7 @@ Use $xiaohei-elephant-illustrations 帮我编辑这张图。
     │       ├── qa-checklist.md
     │       ├── style-dna.md
     │       └── xiaohei-elephant-ip.md
-    └── xiaohei-elephant-scenes/
+    ├── xiaohei-elephant-scenes/
         ├── SKILL.md
         ├── agents/
         │   └── openai.yaml
@@ -323,6 +331,14 @@ Use $xiaohei-elephant-illustrations 帮我编辑这张图。
             ├── prompt-template.md
             ├── qa-checklist.md
             └── style-dna.md
+    └── real-person-cover-design/
+        ├── SKILL.md
+        ├── README.md
+        ├── GOTCHAS.md
+        ├── agents/
+        │   └── openai.yaml
+        ├── references/
+        └── templates/
 ```
 
 ---
