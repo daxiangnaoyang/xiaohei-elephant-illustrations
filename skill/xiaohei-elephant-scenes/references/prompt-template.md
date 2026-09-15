@@ -1,5 +1,7 @@
 # 小黑象 2.0 Prompt Template
 
+> 本文件是唯一的最终生图 Prompt 模板。`SKILL.md` 只负责路由、段落编译、密度决策和门禁；生成时按模式选用本文件，不临时另写一套平行 Prompt。
+
 ## 标准 16:9 正文图
 
 ```text
@@ -135,6 +137,8 @@ PPT 信息图、卡片网格、节点墙、复杂流程图、UI 截图、仪表�
 
 ## Cover 版 21:9 单图
 
+**尺寸规则（铁律）：公众号文章封面统一 21:9 超宽横向构图（目标像素约 1915×821）。任何生图渠道（codex/智谱/其他）都必须在 prompt 第一行显式写明 21:9 ultra-wide horizontal；本地字体参考图也必须先按 21:9 渲染再投喂。**
+
 ```text
 生成一张 21:9 超横版公众号封面图。Cover 版是单独的一张，不是正文 16:9 配图。
 
@@ -189,6 +193,7 @@ ONE-PASS INTEGRATED COMPOSITION LOCK:
 - Do NOT create a blank/no-text background for later typesetting. Do NOT paste a white title card, text box, flat digital text layer, or local-script typography over a finished image.
 - A locally rendered `ZCOOL KuaiLe` title reference may be supplied only as a visual reference for glyph shape, hierarchy, line breaks, and color. The final cover must still be generated as one coherent image.
 - If text is unstable, shorten the title, split it into at most two lines, reduce the allowed text list, strengthen the verbatim text instruction, and regenerate. Never switch to post-overlay.
+- Retry fuse: count complete Cover candidates in `cover_attempts`; each candidate uses exactly one `image_gen`, the total is capped at 8, and a ninth candidate is forbidden. Resolve conflicts as P0 platform safe zones and mandatory exact text, then P1 readability/content, then P2 decoration/aesthetics; if a locked legal text cannot fit safely, stop for human review.
 
 COVER TYPOGRAPHY RUNTIME CONTRACT:
 - Use the reference image only as `TYPOGRAPHY_REFERENCE_ONLY`; it is not a title layer, mask, transparent PNG, or compositing source.
@@ -283,6 +288,9 @@ COVER TYPOGRAPHY RUNTIME CONTRACT:
 ```text
 生成一张 9:16 竖版中文短视频封面图。使用“扇面内容”作为平面主画布，把已确认视频文稿压缩成“一个版面上的核心判断”。这是平面内容构图，不是实体折扇，不是手持实拍，不是扇子图标，也不是 21:9 横版封面裁切。
 
+扇面风格母版：{{STYLE_REFERENCE}}
+母版输入身份：`STYLE_REFERENCE_ONLY`。仅提取暖白纸面、轻微不规则边缘、蓝绿低饱和边缘泼墨、中央单一主题色刷痕、粗重略不规则中文手写字、批注气泡、卡通简笔图标、朱红印记和底部金句区。不得复制母版原题字、原印章文字、原气泡文字或原图解内容；不得把母版当成底图、文字层、遮罩或合成素材。
+
 封面主题：{{TOPIC}}
 主标题（逐字准确显示）：{{TITLE_TEXT}}
 标题重点词：{{TITLE_EMPHASIS}}
@@ -354,7 +362,8 @@ ONE-PASS INTEGRATED COMPOSITION LOCK:
 3. `{{SIDE_NOTES}}` 只保留 2-4 条，全部放入 `{{CALLOUT_BUBBLES}}`；优先从文稿中选“处境、机制、结果/边界”各一条；没有依据的数字、品牌名和案例写 `未获取`，不补造。
 4. `{{CARTOON_ICONS}}` 只选 2-4 个与文稿有直接关系的卡通简笔图标；`{{RED_SEALS}}` 只选 1-2 个朱红印章/印记，不生成虚构公章。
 5. `{{BRAND_ANCHOR_MODE}}` 默认填“小黑象”。只有用户明确选择官方 logo，或项目已经提供官方 logo 参考资产时，才填“官方大象 logo”。
-6. 生成前必须把完整变量值写入项目的 `prompts/video-cover-fan-prompt.md`；生成后按 `references/qa-checklist.md` 的 `9:16 Video Cover Branch` 和 `Fan Surface Variant` 两组检查。
+6. `{{STYLE_REFERENCE}}` 默认读取 `references/fan-cover-reference-analysis.md` 登记的唯一母版绝对路径；用户为本次任务明确提供新母版时只填新路径，不同时传入默认母版或历史参考图。
+7. 生成前必须把完整变量值写入项目的 `prompts/video-cover-fan-prompt.md`；生成后按 `references/qa-checklist.md` 的 `9:16 Video Cover Branch` 和 `Fan Surface Variant` 两组检查。
 
 ## 彩蛋长卷
 
