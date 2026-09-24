@@ -362,6 +362,89 @@ ONE-PASS INTEGRATED COMPOSITION LOCK:
 6. `{{STYLE_REFERENCE}}` 默认读取 `references/fan-cover-reference-analysis.md` 登记的唯一扇面母版绝对路径，并在回执中标记 `STYLE_REFERENCE_ONLY`；不得同时混入历史参考图、上一张成图或合成图。
 7. 生成前把完整变量值写入项目的 `prompts/xhs-infographic-3x4-prompt.md`，并创建 `templates/xhs-infographic-3x4-receipt.md` 的回执；生成后按 QA 清单的 `3:4 Xiaohongshu Handdrawn Infographic Branch` 检查。
 
+## 3:4 小红书封面视觉分支（V3 Real-Person Cover Reference）
+
+本分支只用于“小黑象 + 小红书封面 / 3:4 封面 / V3 真人封面”。它不是 3:4 手绘信息图，也不是 9:16 V3 封面的裁切版。V3 参考必须拆成三个角色：成品封面只提供视觉语言，身份图只提供人物身份，动作图只提供一个手势或姿态。
+
+~~~text
+生成一张独立的 3:4 竖版小红书封面图。重新设计 3:4 构图，不裁切、拉伸或复用 9:16 成品作为底图。
+
+封面主题：{{TOPIC}}
+主标题（逐字准确显示）：{{TITLE_TEXT}}
+标题重点词：{{TITLE_EMPHASIS}}
+底部金句（逐字准确显示）：{{BOTTOM_QUOTE}}
+必要短标签（最多 3 个）：{{SHORT_LABELS}}
+封面级视觉隐喻：{{COVER_METAPHOR}}
+3 秒读懂句：{{THREE_SECOND_READ}}
+
+V3 真人封面成品参考（STYLE_REFERENCE_ONLY）：{{V3_COVER_STYLE_REFERENCE}}
+人物身份参考（IDENTITY_REFERENCE_ONLY）：{{V3_PERSON_IDENTITY_REFERENCE}}
+人物单一动作参考（ACTION_REFERENCE_ONLY）：{{V3_PERSON_ACTION_REFERENCE}}
+参考角色约束：{{REFERENCE_ROLE_BOUNDARY}}
+全部允许文字白名单：{{ALLOWED_TEXT}}
+本次额外禁止项：{{AVOID}}
+
+V3 reference-role lock:
+- Use the V3 finished cover only for the restrained deep-blue signal field, clean white silhouette outline, real-person cover finish, visual hierarchy, and lighting language.
+- Use the identity reference only for the person's face, hair, glasses, facial proportions, age impression, and identity anchors. Do not copy its background.
+- Use the single action reference only for one hand gesture and one half-body action. Do not combine multiple action references or invent extra hands.
+- Do not copy the V3 reference title, quote, labels, line positions, exact crop, background artwork, or any readable text. Do not use the V3 image as a base, crop, mask, overlay, or compositing source.
+
+HEAD-SCALE LOCK (MANDATORY V3 OUTPUT):
+- Use the 200%-head-enlarged real-person version in the final image. Enlarge the head and face to approximately 200% of the normal adult half-body head-to-torso ratio.
+- Preserve the identity anchors inside the larger head: identical thin gold round glasses, eye spacing, eyebrows, nose, mouth, moustache, narrow goatee, hairline, skin tone, and age. Keep the neck, shoulders, collar, and approved gesture naturally connected.
+- The identity reference only decides who the person is; it does not authorize copying its natural head-to-torso proportion. Do not use the natural-proportion version as the final output.
+- This is a realistic cute-proportion stylization, not a bobblehead, baby face, enlarged eyes, anime, cartoon, toy, plastic 3D, face replacement, or giant cropped portrait.
+
+视觉方向：
+3:4 vertical Xiaohongshu cover, concise editorial cover with a real-person identity anchor, a concrete real object, and a tiny Xiaohei Elephant 2.0 worker. Adapt the V3 real-person cover language into a new 3:4 composition. Use a restrained deep navy signal field only as a background accent, with a large warm cream paper/work-surface area or clear warm edge light behind the real object and Xiaohei. Never put black Xiaohei on black without separation. The real person is a medium half-body figure, recognizable but not a giant portrait; leave a deliberate title area and a readable action area.
+
+画面主链：
+- 人物承担：{{PERSON_ROLE}}
+- 真实主物品：{{REAL_OBJECT}}
+- 起点 / 问题状态：{{START_STATE}}
+- 真人动作：{{PERSON_ACTION}}
+- 小黑象核心物理动作：{{XIAOHEI_ACTION}}
+- 结果 / 转折状态：{{RESULT_STATE}}
+- 可见关系：{{START_STATE}} -> {{PERSON_ACTION}} / {{XIAOHEI_ACTION}} -> {{RESULT_STATE}}
+
+构图与安全区：
+- 画布固定 3:4，独立设计，不做 9:16 裁切。顶部 0%-8% 和底部 90%-100% 保持低信息密度，避免平台 UI 遮挡。
+- 标题位于 8%-24% 内容区，最多两行；真人和物件位于 25%-82% 内容区，形成一条从标题到动作再到结果的阅读路径；金句位于 82%-90% 内容区。
+- 人物使用 V3 身份与单一动作参考，保持中景半身和自然手部；不要巨头、证件照、全身小人、重复手指或额外人物。
+- 白描边必须围绕真人完整轮廓在同一次生图中生成：单一、干净、细薄的白色轮廓线，不要发光贴纸边、双层描边或粗白边。
+- 小黑象必须站在暖奶油纸面、浅色工作台或暖边缘光中，与真实物件发生接触；不要把动作藏在深色背景里。
+
+Xiaohei Elephant 2.0 IP lock:
+A tiny nimble solid BLACK baby elephant silhouette, matte black cutout body, tiny white dot eyes, short stubby trunk like a small curled hose, small round ears, compact low body.
+Scale lock: in this 3:4 cover, elephant height is only 4%-6% of canvas height and never exceeds one third of the main real object's height.
+FOUR SHORT ROUNDED ELEPHANT PEG LEGS under the body, quadruped stance. Front and rear legs may be partially hidden by the body or perspective, but it must still read as a four-legged baby elephant.
+The trunk performs the main action. No human arms or hands. No biped pose, no human legs, no stick legs, no knees, no feet, no shoes.
+Not a humanoid Xiaohei, not a black human silhouette, not a stick figure, not a robot, not a bear, not a pig. Not a glossy 3D toy, plush mascot, realistic elephant figurine, cute children's character, or heavy round statue.
+
+真实品牌规则：
+如果主题明确涉及飞书、Codex、OpenAI 或其他真实产品，只在对应真实物件上放准确、很小的官方 logo/app icon/product mark；不漂浮、不猜测、不做品牌广告。未点名品牌时不添加 logo。
+
+文字与字体：
+- 主标题逐字显示“{{TITLE_TEXT}}”，使用粗重、圆润、略不规则的 ZCOOL KuaiLe 手写气质；{{TITLE_EMPHASIS}} 使用珊瑚红 #E8655A，其余主字为墨黑或暖白纸面上的深色字。
+- 底部金句逐字显示“{{BOTTOM_QUOTE}}”，只出现一次，明显小于主标题；{{SHORT_LABELS}} 只能作为贴近物件的短标注。
+- 图中只允许出现 {{ALLOWED_TEXT}}；禁止乱码、伪文字、额外英文、随机 HUD 小字、水印、平台按钮、头像、点赞评论图标和字幕条。
+
+ONE-PASS INTEGRATED COMPOSITION LOCK:
+- 在同一次 image_gen 中同时生成 V3 人物身份、单一动作、白描边、真实物件、小黑象、深蓝/暖奶油背景、标题、标签和金句。
+- 所有参考均为 *_REFERENCE_ONLY；不得把任何参考图作为底图、图层、mask、overlay、composite、merged 或后期修字输入。
+- 每个候选只调用一次 image_gen。若人物身份、手势、白描边、文字、黑底可读性或小黑象四足结构失败，拒绝整张候选并重新生成，不得本地修图。
+- 单张最多 8 个候选；第 8 版仍不收敛时标记 NEEDS_HUMAN，禁止生成第 9 版。
+~~~
+
+### 3:4 小红书 V3 真人封面模板变量填充顺序
+
+1. 先把封面主题压缩成一个核心判断，填写 TOPIC、TITLE_TEXT、BOTTOM_QUOTE、ALLOWED_TEXT；标题最多两行，金句只保留一句。
+2. 先明确真人在画面中的角色，再填写真实物品、起点状态、真人动作、小黑象动作和结果状态；画面必须有一条可见主链，不把信息图的 3-6 节点墙搬进封面。
+3. V3_COVER_STYLE_REFERENCE 只能登记一张 V3 成品封面并标记 STYLE_REFERENCE_ONLY；V3_PERSON_IDENTITY_REFERENCE 只能登记一张身份图；V3_PERSON_ACTION_REFERENCE 只能登记一张动作图。
+4. 参考图的输入角色和路径必须写入 templates/xhs-cover-v3-real-person-receipt.md；没有可核验本地 V3 资产时标记 BLOCKED，不凭空补造真人身份。
+5. 生成前把完整变量值写入项目的 prompts/xhs-cover-v3-real-person-prompt.md，每个候选记录 generation_passes: 1；生成后按 QA 清单的 3:4 Xiaohongshu Cover with V3 Real-Person Reference 检查。
+
 ## 9:16 扇面内容视觉分支（Fan-Surface Content Variant）
 
 ```text
