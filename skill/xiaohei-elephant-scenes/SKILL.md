@@ -148,7 +148,7 @@ D1 是例外，不是默认。段落出现多个独立动词或“因为/所以/
 
 ### 5. 运行时与输出
 
-- 用户只要方案或 shot list 时不直接生图；用户明确要求生成时，Codex 有内置 `image_gen` 就按批次扇出独立 job。优先当前 GPT 系列运行时（本机配置为 `gpt-5.6-luna`），母版冻结后每个 job 只喂同一张已验收角色母版；标准图 QA 在 Codex 走 GPT 原生视觉理解，只有 Hermes/智谱外部通道才运行 `scripts/qa_image.py`。没有图像工具时只交付 prompt 和 QA，不声称已生成图片。
+- 用户只要方案或 shot list 时不直接生图；用户明确要求生成时，Codex 有内置 `image_gen` 就按批次扇出独立 job。优先当前 GPT 系列运行时（具体模型以本机 `/Users/dx/.codex/config.toml` 的 `model` 为准），母版冻结后每个 job 只喂同一张已验收角色母版；标准图 QA 在 Codex 走 GPT 原生视觉理解，只有 Hermes/智谱外部通道才运行 `scripts/qa_image.py`。没有图像工具时只交付 prompt 和 QA，不声称已生成图片。
 - 图片、prompt、母版锁和回执统一归档到 `/Users/dx/Hermes-agent/21-配图空间/<文章或项目名>/`；2.0 文章推送字段复用 `xiaohei-elephant-illustrations/references/unified-push-structure.md`，图片模式写明“2.0 真实物品场景图”。
 - Cover 必须执行下一节的运行时门禁；生成后先 QA，首张不过不得批量继续。Cover 候选最多尝试 8 版，具体优先级和熔断见 `cover-typography-runtime-contract.md`。
 
