@@ -4,9 +4,9 @@
 
 - [ ] `agents/openai.yaml` 不是 `{}` 空对象。
 - [ ] `agents/openai.yaml` 的 `default_prompt` 明确调用 `$xiaohei-elephant-scenes`，而不是旧版 `$xiaohei-scenes`。
-- [ ] `agents/openai.yaml` 明确要求读取 `xiaohei-elephant-ip-lock.md`、`style-dna.md`、`prompt-template.md`、`fan-cover-reference-analysis.md`、`object-patterns.md`、`qa-checklist.md` 和 `GOTCHAS.md`。
+- [ ] `agents/openai.yaml` 明确要求读取 `xiaohei-elephant-ip-lock.md`、`style-dna.md`、`prompt-template.md`、`fan-cover-reference-analysis.md`、`xhs-infographic-3x4-runtime-contract.md`、`object-patterns.md`、`qa-checklist.md` 和 `GOTCHAS.md`。
 - [ ] `agents/openai.yaml` 明确要求读取 `cover-typography-runtime-contract.md`，并要求创建 `cover-typography-receipt.md`。
-- [ ] 路由边界清楚：2.0 / 真实物品 / 物理动作 / 小现场走本 Skill；普通白底手绘走 `xiaohei-elephant-illustrations`；旧版 `xiaohei-scenes` 不承接“小黑象”请求。
+- [ ] 路由边界清楚：2.0 / 真实物品 / 物理动作 / 小现场走本 Skill；明确“小黑象 + 小红书/3:4/信息图”走 XHS 分支；泛手绘信息图走 `handdrawn-infographic-card`；普通白底手绘走 `xiaohei-elephant-illustrations`；旧版 `xiaohei-scenes` 不承接“小黑象”请求。
 
 ## QA 分级与通道
 
@@ -15,7 +15,7 @@
 - [ ] `qa_image.py` 的 `--allowed-text` 或 `--allowed-text-file` 已填写本图允许出现的全部可读文字；没有文字时明确传空白名单，额外文字仍判定失败。
 - [ ] Hermes 外部通道的 `qa_image.py` 返回 `PASS` 才能交付；返回 `FAIL` 必须重生，返回 `BLOCKED`（缺 key、接口报错、429、超时或返回不可解析）不得把候选图当正式图。Codex 原生视觉 QA 不可用时同样只能 `BLOCKED`。
 - [ ] `qa_image.py` 不替代 3 秒读图检查：画面仍必须表达 shot record 的输入/处境、机制/动作和结果/边界，且密度档位与段落复杂度匹配。
-- [ ] Cover、9:16 和长卷不使用轻量通道替代全量清单；Cover 仍执行 typography contract、字体回执和输入血缘检查。
+- [ ] Cover、3:4 小红书、9:16 和长卷不使用轻量通道替代全量清单；Cover 仍执行 typography contract、字体回执和输入血缘检查，3:4 小红书执行独立运行时契约和卡片回执。
 
 标准正文图快速通道示例：
 
@@ -140,6 +140,31 @@ python3 scripts/qa_image.py \
 - [ ] 没有生成平台按钮、播放图标、头像、点赞评论图标、字幕条、时间戳或可读 HUD 小字。
 - [ ] 9:16 视频封面仍满足小黑象高度约 4%-6%、短象鼻、小耳朵、白点眼和四足短圆桩腿硬门槛；小黑象不是竖版里的巨型吉祥物。
 - [ ] 画面在手机缩略图上仍能区分标题、扇面内容画布、批注气泡/卡通图标/红色印章和品牌锚点，3 秒内能读懂。
+
+## 3:4 Xiaohongshu Handdrawn Infographic Branch
+
+以下检查只在用户明确选择“**小黑象 + 小红书 / 3:4 / 手绘信息图**”时执行。它与 9:16 Fan Surface Variant 分开，不使用实体折扇。
+
+- [ ] 画幅为独立的 3:4 竖版单卡；没有多页拼图、联系表、九宫格、轮播图合成或把多张卡片塞进一张图。
+- [ ] 已读取 `references/xhs-infographic-3x4-runtime-contract.md`，并为本卡填写 `templates/xhs-infographic-3x4-receipt.md`。
+- [ ] 背景是暖奶油纸张肌理 `#F5F0E8` 或近似浅色纸面；没有灰黑、深褐、炭色底、渐变、暗黑科技背景或厚重阴影。
+- [ ] 主文字和线条为墨黑，辅助标注为暖灰 `#6B6B6B`；马卡龙色块只做少量信息区，主强调色只保留一个。
+- [ ] 扇面元素被转译为平面内容语言：轻微不规则纸面边缘、蓝绿低饱和边缘泼墨、中央单一主题刷痕、手写字、气泡、简笔图标和朱红印记；没有实体折扇、扇片、扇骨、扇柄、折痕、手持关系或扇子图标。
+- [ ] 卡片来自完整段落，明确填写一个 `LAYOUT` 和 3-6 个独立可见信息节点；每个节点都有图形、状态、位置、关系线、气泡或短标签的承载方式。
+- [ ] 画面能看见“处境/问题 -> 机制/判断 -> 结果/边界”至少 3 个节点；不是只把文章标题画成大字，也没有让标签代替机制。
+- [ ] 只有一条主视觉语法：流程、因果、对比、问题到解决、组成、层级或反馈；没有物件横向排队、复杂流程图、UI、仪表盘或密集节点墙。
+- [ ] 手绘区域/圆角色块/虚线框不超过 2-4 个；批注气泡为 2-4 个，简笔图标为 2-4 个，朱红印记为 1-2 个；每个元素都对应文稿节点。
+- [ ] 顶部约 0%-8% 和底部约 88%-100% 保持低信息密度；标题位于 8%-22%，核心信息位于 22%-82%，金句位于 82%-88%，没有关键内容落入平台安全区。
+- [ ] 主标题最多两行、是一个核心判断；底部金句只有一句；辅助标签每条约 2-6 个汉字，不出现大段正文。
+- [ ] 所有图中文字逐字列入 `allowed_text`；没有错字、漏字、多余伪文字、随机英文、乱码、水印、平台按钮或可读 HUD 小字。
+- [ ] 标题和金句使用粗重、略不规则的手写字形，参考 ZCOOL KuaiLe；没有标准科技黑体、UI 字体、白字发光或后贴海报字。
+- [ ] 小黑象是极小的平面黑色执行者，高度约 3%-5% 画面高；有短象鼻、小耳朵、白点眼和四足短圆桩腿，不是二足、人形腿、火柴腿、鞋脚或厚重玩偶。
+- [ ] 小黑象的象鼻与标题重点、关系线、下划线或印记发生清晰平面关系，不漂浮在角落，也没有人类手臂和手掌。
+- [ ] 品牌锚点只选一个：默认小黑象；若使用官方大象 logo，资产来源可核验且没有同时生成第二个小黑象。真实产品 logo 只在文稿点名时出现，并贴在具体信息单元上。
+- [ ] `STYLE_REFERENCE` 只标记为 `STYLE_REFERENCE_ONLY`，只提取版式和质感；没有复制母版原题字、原印章文字、原气泡文字或原图解内容，也没有把母版当底图/文字层/mask。
+- [ ] 每个候选只调用一次 `image_gen`；没有本地叠字、透明文字 PNG、标题卡、base/overlay/composite/merged 中间产物。
+- [ ] 单张卡片候选不超过 8 版；8 版仍不收敛时标记 `NEEDS_HUMAN`，没有生成第 9 版。
+- [ ] 缩小到手机缩略图后 3 秒内能读出“主题判断 + 一个关系线索 + 品牌锚点”；否则拒绝交付。
 
 ## Fan Surface Variant
 

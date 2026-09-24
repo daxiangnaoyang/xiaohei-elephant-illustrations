@@ -1,6 +1,6 @@
 # 小黑象 2.0 GOTCHAS
 
-本文只记录失败信号和修复思路；模式路由、密度数值、Prompt 和 QA 的唯一执行口径分别以 `SKILL.md`、`references/style-dna.md`、`references/prompt-template.md` 和 `references/qa-checklist.md` 为准，不在这里维护第二套合同。
+本文只记录失败信号和修复思路；模式路由、密度数值、Prompt、分支运行时和 QA 的唯一执行口径分别以 `SKILL.md`、`references/style-dna.md`、`references/prompt-template.md`、对应分支的 `references/xhs-infographic-3x4-runtime-contract.md` 和 `references/qa-checklist.md` 为准，不在这里维护第二套合同。
 
 ## OpenAI 入口为空
 
@@ -104,6 +104,12 @@
 - 现象：原图看起来信息丰富，但缩小后只剩蓝绿橙色块，主标题、品牌锚点和文稿关系都读不出来；气泡互相遮挡，红色印章像公章墙，金句还可能被平台底部控件挡住。
 - 原因：把每个批注、图标和印章都当成独立栏目，超过了 9:16 封面可承载的信息量。
 - 处理：主标题只保留一个核心判断；批注气泡收敛到 2-4 个，卡通简笔图标收敛到 2-4 个，红色印章收敛到 1-2 个，主强调色只保留一种；平面内容画布放在 10%-84% 内容区，底部 84%-100% 留给平台安全区，生成后必须做手机缩略图 QA。
+
+## 小红书手绘信息图只停留在项目 Prompt
+
+- 现象：项目目录里有 `xhs-infographic-3x4-template.md`，但调用 `xiaohei-elephant-scenes` 时仍走标准 16:9 真实物品图，或直接调用通用手绘信息图 Skill；扇面元素、IP 锁和文字白名单没有一起生效。
+- 原因：3:4 小红书卡片曾是一次性项目 Prompt，没有独立路由、运行时契约、唯一模板分支和 QA 回执。
+- 处理：只有“**小黑象 + 小红书 / 3:4 / 手绘信息图**”才进入本 Skill 的 `XHS-3:4` 分支；先读 `references/xhs-infographic-3x4-runtime-contract.md`，再用 `prompt-template.md` 的对应分支和 `templates/xhs-infographic-3x4-receipt.md`。保留扇面纸面、泼墨、气泡、简笔图标和朱红印记，但禁止实体折扇；每张卡片必须表达完整段落的 3-6 个可见节点。
 
 ## Cover 只有氛围，没有主题、金句和图解
 
