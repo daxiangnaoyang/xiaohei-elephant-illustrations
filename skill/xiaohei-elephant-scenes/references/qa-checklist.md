@@ -10,17 +10,21 @@
 
 ## QA 分级与通道
 
-- [ ] 标准 16:9 正文图先通过 shot record 的段落语义/密度门，再运行 `scripts/qa_image.py` 一次；该通道只检查 IP 形体、角色尺度和文字白名单。
+- [ ] 标准 16:9 正文图先通过 shot record 的段落语义/密度门，再由 Codex 当前 GPT 系列运行时做一次原生视觉 QA；该通道只检查 IP 形体、角色尺度和文字白名单。
+- [ ] 运行于 Hermes/智谱外部 API 时，才使用 `scripts/qa_image.py` 这个 Zhipu/GLM 适配器；不得把它的模型名写成 Codex 默认视觉模型。
 - [ ] `qa_image.py` 的 `--allowed-text` 或 `--allowed-text-file` 已填写本图允许出现的全部可读文字；没有文字时明确传空白名单，额外文字仍判定失败。
-- [ ] 标准正文图的 `qa_image.py` 返回 `PASS` 才能交付；返回 `FAIL` 必须重生，返回 `BLOCKED`（缺 key、接口报错、429、超时或返回不可解析）不得把候选图当正式图。
+- [ ] Hermes 外部通道的 `qa_image.py` 返回 `PASS` 才能交付；返回 `FAIL` 必须重生，返回 `BLOCKED`（缺 key、接口报错、429、超时或返回不可解析）不得把候选图当正式图。Codex 原生视觉 QA 不可用时同样只能 `BLOCKED`。
 - [ ] `qa_image.py` 不替代 3 秒读图检查：画面仍必须表达 shot record 的输入/处境、机制/动作和结果/边界，且密度档位与段落复杂度匹配。
 - [ ] Cover、9:16 和长卷不使用轻量通道替代全量清单；Cover 仍执行 typography contract、字体回执和输入血缘检查。
 
 标准正文图快速通道示例：
 
+Codex 默认使用当前 GPT 原生视觉理解；下面命令只用于 Hermes/智谱外部通道：
+
 ```bash
 python3 scripts/qa_image.py \
   "/Users/dx/Hermes-agent/21-配图空间/<文章或项目名>/standard-01.png" \
+  --provider zhipu \
   --allowed-text "输入" \
   --allowed-text "结果" \
   --output "/Users/dx/Hermes-agent/21-配图空间/<文章或项目名>/qa/standard-01.json"

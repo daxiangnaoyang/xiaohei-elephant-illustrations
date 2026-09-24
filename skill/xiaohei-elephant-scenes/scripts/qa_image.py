@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-"""Run the lightweight visual QA gate for a Xiaohei Elephant 2.0 body image.
+"""Run the Hermes/Zhipu lightweight visual QA adapter for a body image.
 
 The body-image gate deliberately checks only the three fast visual contracts:
 IP shape, character scale, and the visible-text whitelist.  Paragraph meaning
 and information density remain a separate shot-record/3-second-read gate.
 
-The script has no third-party dependencies. It uses macOS ``sips`` and
-``base64`` for preprocessing and sends one OpenAI-compatible request with
-``curl`` to GLM-4.6V. It never prints an API key.
+This is an external Zhipu adapter, not Codex's native GPT visual route. Codex
+should use its current GPT-series runtime for visual understanding. The script
+has no third-party dependencies. It uses macOS ``sips`` and ``base64`` for
+preprocessing and sends one OpenAI-compatible request with ``curl`` to
+GLM-4.6V. It never prints an API key.
 """
 
 from __future__ import annotations
@@ -25,6 +27,7 @@ from typing import Any
 
 DEFAULT_ENDPOINT = "https://open.bigmodel.cn/api/paas/v4/chat/completions"
 DEFAULT_MODEL = "glm-4.6v"
+DEFAULT_PROVIDER = "zhipu"
 KEY_NAMES = (
     "ZAI_API_KEY",
     "GLM_API_KEY",
@@ -268,6 +271,7 @@ def classify(model_result: dict[str, Any], allowed_text: list[str]) -> dict[str,
 def result_payload(
     *,
     image: Path,
+    provider: str = DEFAULT_PROVIDER,
     mode: str,
     model: str,
     endpoint: str,
@@ -280,6 +284,7 @@ def result_payload(
     delivery = {"PASS": "DELIVER", "FAIL": "REJECT", "BLOCKED": "BLOCKED"}[status]
     return {
         "image": str(image.resolve()),
+        "provider": provider,
         "mode": mode,
         "model": model,
         "endpoint": endpoint,
@@ -308,6 +313,12 @@ def emit(result: dict[str, Any], output: Path | None) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("image", type=Path, help="Path to the generated body image")
+    parser.add_argument(
+        "--provider",
+        choices=(DEFAULT_PROVIDER,),
+        default=DEFAULT_PROVIDER,
+        help="External provider adapter; Codex native GPT QA does not use this script",
+    )
     parser.add_argument(
         "--allowed-text",
         action="append",

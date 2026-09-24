@@ -10,7 +10,7 @@ interface:
     3. 标准正文按 `references/style-dna.md` 选择密度：D1 仅单一判断（1 主 + 1 辅助、2-3 标签、2-3 节点）；D2 为解释型默认（1 主 + 2-3 辅助、4-5 标签、3-4 节点）；D3 处理多步骤/条件/角色/对比/分支/反馈/边界（1 主或紧凑主组 + 3-5 辅助或状态单元、5-7 标签、4-6 节点）。每个节点必须落到物件、状态、动作、位置、关系或短标签，使用一条主视觉语法，不做物品排队或 PPT 信息图。
     4. 最终 Prompt 只使用 `references/prompt-template.md`。标准图先放尺度补偿锁，再折入 `references/xiaohei-elephant-ip-lock.md`；小黑象保持短象鼻、小耳朵、白点眼、四足短圆桩腿和轻巧小比例，信息增加时扩展真实物品现场，不放大角色。明确点名飞书、Codex、OpenAI 等产品时才使用对应官方 logo，且 logo 要小、准、贴在真实物品上。
     5. 同文章多图先过第 1 张 QA，再冻结唯一角色母版。母版冻结是唯一 barrier；之后 02/03/04 等独立 job 默认并行启动最多 3 个 `codex exec`，每个只引用同一母版并写独立输出/Prompt/QA，限流时降低并发或排队，不串联引用上一张成图。
-    6. 标准正文图先过 shot record 的段落语义/密度门，再用 `scripts/qa_image.py` 调用一次 GLM-4.6V 检查 IP、尺度和文字白名单；Cover/9:16/长卷继续走对应全量 QA，不得用轻量检查替代。
+    6. 标准正文图先过 shot record 的段落语义/密度门，再由 Codex 当前 GPT 系列运行时的原生视觉理解做一次 IP、尺度和文字白名单 QA；不要把 GLM-4.6V 当作 Codex 视觉模型。只有运行于 Hermes/智谱外部 API 通道时，才调用 `scripts/qa_image.py` 这个 Zhipu/GLM 适配器。Cover/9:16/长卷继续走对应全量 QA，不得用轻量检查替代。
     7. Cover/9:16 额外执行 `references/cover-typography-runtime-contract.md`：单个候选一次 `image_gen`，整个 Cover 最多 8 个候选；P0 安全区/强制文案优先于 P1 可读性/内容，再优先于 P2 装饰审美，8 版未收敛就 `NEEDS_HUMAN`，禁止第 9 版和独立文字层。扇面分支只生成平面内容画布，品牌锚点只能有一个，不生成实体折扇。
     8. 生成后按 `references/qa-checklist.md` 验收；Critical 失败不交付、不继续批量生图。图片与 prompt 归档到 `/Users/dx/Hermes-agent/21-配图空间/<文章或项目名>/`。
 

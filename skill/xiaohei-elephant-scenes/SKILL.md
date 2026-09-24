@@ -56,6 +56,7 @@ when-to-use: |
 - 真实物品服务于段落隐喻；每个物件、状态或标签都必须有语义职责，不能靠装饰补密度。
 - 小黑象是唯一角色，必须是短象鼻、小圆耳、白点眼、四足短圆桩腿的轻巧黑色小象；禁止二足、人形腿、火柴腿、鞋脚、玩具化和厚重摆件感。
 - 用户明确点名飞书、Codex、OpenAI 等真实产品时，相关真实物品可以使用对应官方 logo / app icon；logo 必须准确、很小、贴在具体物品上，不漂浮、不伪造、不做品牌广告。未点名或无法确认时使用中性图标。
+- Codex 的编排和默认视觉理解使用当前 GPT 系列运行时；`glm-4.6v` 只属于 Hermes/智谱外部 API 适配器，不得写成 Codex 的视觉模型。
 - 密度增加时扩展真实物品小现场的层次和关系，不放大小黑象，不拉近镜头，不把画面做成卡片网格、节点墙、UI、仪表盘或 PPT。
 - 没有完整段落时，不补造机制、结果、品牌、数据或案例；将缺失内容写成“未获取”，只输出待补充 shot list 或 prompt。
 
@@ -73,7 +74,7 @@ when-to-use: |
 | 同文章角色母版和批次生成 | `references/article-batch-character-lock.md` |
 | Cover 字体、一次成型、输入血缘和回执 | `references/cover-typography-runtime-contract.md` |
 | 生成后检查和拒绝条件 | `references/qa-checklist.md` |
-| 标准正文图快速视觉 QA | `scripts/qa_image.py` |
+| 标准正文图快速视觉 QA（Codex 原生 GPT；Hermes 外部适配器） | `scripts/qa_image.py` |
 | 扇面参考图的唯一母版与变量边界 | `references/fan-cover-reference-analysis.md` |
 | 常见失败与修复 | `GOTCHAS.md` |
 
@@ -147,7 +148,7 @@ D1 是例外，不是默认。段落出现多个独立动词或“因为/所以/
 
 ### 5. 运行时与输出
 
-- 用户只要方案或 shot list 时不直接生图；用户明确要求生成时，Codex 有内置 `image_gen` 就按批次扇出独立 job。优先 `gpt-5.6-luna`，母版冻结后每个 job 只喂同一张已验收角色母版；没有图像工具时只交付 prompt 和 QA，不声称已生成图片。
+- 用户只要方案或 shot list 时不直接生图；用户明确要求生成时，Codex 有内置 `image_gen` 就按批次扇出独立 job。优先当前 GPT 系列运行时（本机配置为 `gpt-5.6-luna`），母版冻结后每个 job 只喂同一张已验收角色母版；标准图 QA 在 Codex 走 GPT 原生视觉理解，只有 Hermes/智谱外部通道才运行 `scripts/qa_image.py`。没有图像工具时只交付 prompt 和 QA，不声称已生成图片。
 - 图片、prompt、母版锁和回执统一归档到 `/Users/dx/Hermes-agent/21-配图空间/<文章或项目名>/`；2.0 文章推送字段复用 `xiaohei-elephant-illustrations/references/unified-push-structure.md`，图片模式写明“2.0 真实物品场景图”。
 - Cover 必须执行下一节的运行时门禁；生成后先 QA，首张不过不得批量继续。Cover 候选最多尝试 8 版，具体优先级和熔断见 `cover-typography-runtime-contract.md`。
 
@@ -184,7 +185,7 @@ python scripts/validate_cover_typography_contract.py \
 
 ## QA 与交付
 
-生成后按 `references/qa-checklist.md` 检查。标准正文图先执行 shot record 的段落语义/密度门，再运行 `scripts/qa_image.py` 做一次 IP、尺度和文字白名单快速视觉 QA；该脚本不检查 Cover 排版，也不能替代 3 秒读图门。Cover、9:16 和长卷仍执行对应的全量清单。以下任一项失败都不交付：
+生成后按 `references/qa-checklist.md` 检查。标准正文图先执行 shot record 的段落语义/密度门，再由 Codex 当前 GPT 系列运行时做一次 IP、尺度和文字白名单快速视觉 QA；运行于 Hermes/智谱外部通道时，才使用 `scripts/qa_image.py` 这一 GLM 适配器。该脚本不检查 Cover 排版，也不能替代 3 秒读图门。Cover、9:16 和长卷仍执行对应的全量清单。以下任一项失败都不交付：
 
 - 角色缺少短象鼻、小耳朵、白点眼或四足短圆桩腿，出现二足、人形腿、火柴腿、鞋脚、玩具化或厚重圆胖感。
 - 标准图小黑象超过 3%—5% 画面高、Cover 超过 4%—6%，或镜头 close-up、低机位、主物品像商品图；不能靠后期缩放修正。

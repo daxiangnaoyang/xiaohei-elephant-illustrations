@@ -216,11 +216,12 @@ Use $xiaohei-elephant-scenes 为“工具调用雪崩不是模型问题，而是
 
 ### 标准正文图快速 QA
 
-正文图先完成 shot record 的段落语义/密度和 3 秒读图检查，再运行一次轻量视觉门。它只检查小黑象 IP、尺度和允许文字；Cover、9:16 和长卷仍走各自的全量 QA。
+正文图先完成 shot record 的段落语义/密度和 3 秒读图检查，再由 Codex 当前 GPT 系列运行时完成一次轻量视觉门。它只检查小黑象 IP、尺度和允许文字；Cover、9:16 和长卷仍走各自的全量 QA。下面的脚本是 Hermes/智谱外部通道适配器，不是 Codex 默认视觉模型。
 
 ```bash
 python3 skill/xiaohei-elephant-scenes/scripts/qa_image.py \
   /path/to/body-image.png \
+  --provider zhipu \
   --allowed-text "输入" \
   --allowed-text "结果" \
   --output /path/to/qa/body-image.json
